@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
          has_many :sessions
          has_many :groups
+         has_many :collaborations, foreign_key: :participant_id
 end
