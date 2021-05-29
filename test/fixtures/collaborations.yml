@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  participant: 1
+  topic: 1
+
+two:
+  participant: 1
+  topic: 1
