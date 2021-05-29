@@ -1,4 +1,4 @@
 class Collaboration < ApplicationRecord
   belongs_to :participant,class_name: :User
-  belongs_to :topic, class_name: :Session
+  belongs_to :session
 end
