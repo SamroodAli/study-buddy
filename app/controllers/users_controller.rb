@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     if @user.valid? && @user.save
       log_in @user
       flash[:success] = 'Welcome to Study Buddy'
+      @user.groups.create(name:"No group")
       redirect_to @user
     else
       render :new
