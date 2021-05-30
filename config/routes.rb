@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :study_sessions, only:[:index,:new,:create,:show]
   resources :groups, only: [:index,:new,:create]
+  resources :users
 end
