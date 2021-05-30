@@ -1,9 +1,0 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  participating_group_id: 1
-  member_id: 1
-
-two:
-  participating_group_id: 1
-  member_id: 1
