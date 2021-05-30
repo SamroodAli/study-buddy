@@ -1,2 +1,5 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<%= form_with model: @group, local: true do |form|%>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.submit "Submit", class:"" %>
+<% end %>
