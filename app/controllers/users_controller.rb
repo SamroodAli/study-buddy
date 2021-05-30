@@ -35,7 +35,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   def destroy
     User.find_by(id: params[:id]).destroy
     flash[:success] = 'User deleted'
@@ -49,16 +48,15 @@ class UsersController < ApplicationController
   end
 
   def login_required
-    unless logged_in?
-      store_original_url
-      flash[:danger] = 'PLease log in'
-      redirect_to login_url
-    end
+    return if logged_in?
+
+    store_original_url
+    flash[:danger] = 'PLease log in'
+    redirect_to login_url
   end
 
   def current_user?
     @user = User.find_by(id: params[:id])
     redirect_to login_url unless correct_user?(@user)
   end
-
 end
