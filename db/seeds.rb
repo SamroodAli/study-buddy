@@ -42,6 +42,6 @@ User.create!( name:  "Nasser",
 
 
 
-User.first.sessions.create!(
+User.first.study_sessions.create!(
   name:"Learning Algorithm"
 )
