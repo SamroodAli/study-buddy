@@ -1,0 +1,9 @@
+.bg-gradient{
+  background: linear-gradient(#2E68A8 45%, #2770A7 92%), #2E68A8;
+  #sidebarToggleTop{
+    color: white;
+    &:hover{
+      background-color: #2E68A8;
+    }
+  }
+}
