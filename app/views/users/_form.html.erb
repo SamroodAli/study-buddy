@@ -1,0 +1,18 @@
+<%= form_with model: @user, local: true do |form|%>
+  <%= render 'shared/error_messages', object:form.object %>
+  <%= form.label :name %>
+  <%= form.text_field :name, class:"form-control" %>
+  <%= form.label :email %>
+  <%= form.email_field :email ,class:"form-control"%>
+  <%= form.label :password %>
+  <%= form.password_field :password ,class:"form-control"%>
+  <%= form.label :password_confirmation,"Confirmation" %>
+  <%= form.password_field :password_confirmation ,class:"form-control"%>
+  <%= form.submit "Update my account", class:"btn btn-primary" %>
+<% end %>
+<% if !@user.new_record? %>
+  <div class="gravatar_edit">
+    <%= gravatar_for @user %>
+    <a href="https://gravatar.com/emails" target="_blank" rel="noopener"> change</a>
+  </div>
+<% end %>
