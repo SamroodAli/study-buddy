@@ -39,4 +39,23 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def login_required
+    unless logged_in?
+      store_original_url
+      flash[:danger] = 'PLease log in'
+      redirect_to login_url
+    end
+  end
+
+  def current_user?
+    @user = User.find_by(id: params[:id])
+    redirect_to login_url unless correct_user?(@user)
+  end
+
 end
