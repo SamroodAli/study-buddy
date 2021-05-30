@@ -9,12 +9,10 @@ class StudySessionsController < ApplicationController
 
   def create
     @study_session = current_user.study_sessions.build(session_params)
-    @study_session.update(group_id:1)
     if @study_session.save
       redirect_to @study_session
     else
-      flash[:alert]='something happened'
-      flash[:notice]= @study_session.to_json
+      flash[:alert]= "#{params[:group_id]} asdasd"
       redirect_to new_study_session_url
     end
 
@@ -27,7 +25,7 @@ class StudySessionsController < ApplicationController
 
   private
   def session_params
-    params.require(:study_session).permit(:name,:user_id)
+    params.require(:study_session).permit(:name,:user_id,:group_id)
   end
 
 end

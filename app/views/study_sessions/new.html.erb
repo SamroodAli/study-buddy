@@ -1,1 +1,8 @@
-<%= render 'form' %>
+<%= @study_session.errors.full_messages %>
+<%= form_with model: @study_session, local: true do |form|%>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <% group_array = current_user.groups.map { |group| [group.name, group.id] } %>
+  <%= select(:study_session,:group_id,group_array) %>
+  <%= form.submit "Submit", class:"" %>
+<% end %>
