@@ -5,4 +5,17 @@ class User < ApplicationRecord
   has_many :collaborative_sessions, through: :collaborations, source: :study_session
   has_many :memberships, foreign_key: :member_id
   has_many :participating_groups, through: :memberships
+
+  attr_accessor :remember_token
+
+  before_save { email.downcase! } # same as self.email = self.email.downcase or self.email = email.downcase
+  validates :name, presence: true, length: { maximum: 50 }
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
+  validates :email, presence: true, uniqueness: { case_sensitive: false },
+                    length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
+
+  has_secure_password
+  validates :password, presence: true, length: { minimum: 8 }, allow_nil: true
+
 end
