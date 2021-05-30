@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  group_id: 1
+  name: MyString
+  duration: 2021-05-30 17:13:36
+
+two:
+  user_id: 1
+  group_id: 1
+  name: MyString
+  duration: 2021-05-30 17:13:36
