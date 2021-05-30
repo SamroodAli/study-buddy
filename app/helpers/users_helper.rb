@@ -5,7 +5,7 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.name, class: 'gravatar')
   end
 
-  def user_helper(user)
+  def user_button(user)
     if @user.new_record?
       "Create my account"
     else
