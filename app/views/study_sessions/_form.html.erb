@@ -1,0 +1,6 @@
+<%= @study_session.errors.full_messages %>
+<%= form_with model: @study_session, local: true do |form|%>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.submit "Submit", class:"" %>
+<% end %>

@@ -6,27 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Create a main sample user.
+
+
 User.create!( name:  "Samrood",
-              email: "example1@study.org",
-              password:              "passpass",
-              password_confirmation: "passpass",
-            )
+  email: "example1@study.org",
+  password:              "passpass",
+  password_confirmation: "passpass",
+)
 User.create!( name:  "Omar",
-              email: "example2@study.org",
-              password:              "passpass",
-              password_confirmation: "passpass",
-            )
+  email: "example2@study.org",
+  password:              "passpass",
+  password_confirmation: "passpass",
+)
 User.create!( name:  "Deepak",
-              email: "example3@study.org",
-              password:              "passpass",
-              password_confirmation: "passpass",
-            )
-            
+  email: "example3@study.org",
+  password:              "passpass",
+  password_confirmation: "passpass",
+)
+
 User.create!( name:  "Jean",
-              email: "example4@study.org",
-              password:              "passpass",
-              password_confirmation: "passpass",
-            )
+  email: "example4@study.org",
+  password:              "passpass",
+  password_confirmation: "passpass",
+)
 
 User.create!( name:  "Leon",
               email: "example5@study.org",
@@ -38,10 +40,11 @@ User.create!( name:  "Nasser",
               email: "example6@study.org",
               password:              "passpass",
               password_confirmation: "passpass",
-            )
-
-
+)
+            
+User.first.groups.create(name:"non group")
 
 User.first.study_sessions.create!(
-  name:"Learning Algorithm"
+  name:"Learning Algorithm",
+  group_id:1
 )

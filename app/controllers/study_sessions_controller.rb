@@ -1,16 +1,23 @@
 class StudySessionsController < ApplicationController
   def index
-    @study_sessions = current_user.sessions
+    @study_sessions = current_user.study_sessions
   end
   
   def new
-    @study_session = current_user.sessions.build
+    @study_session = current_user.study_sessions.build
   end
 
   def create
-    study_session = Session.new(session_params)
-    study_session.group_id = 1 if session.group_id = nil 
-    study_session.save
+    @study_session = current_user.study_sessions.build(session_params)
+    @study_session.update(group_id:1)
+    if @study_session.save
+      redirect_to @study_session
+    else
+      flash[:alert]='something happened'
+      flash[:notice]= @study_session.to_json
+      redirect_to new_study_session_url
+    end
+
   end
 
 
@@ -19,7 +26,7 @@ class StudySessionsController < ApplicationController
 
   private
   def session_params
-    params.require(:study_session).permit(:name)
+    params.require(:study_session).permit(:name,:user_id)
   end
 
 end
