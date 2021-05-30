@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   resources :study_sessions, only:[:index,:new,:create,:show]
-  resources :groups, only: [:index]
+  resources :groups, only: [:index,:new,:create]
 end
