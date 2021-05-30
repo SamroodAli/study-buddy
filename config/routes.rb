@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'sessions/index'
-  get 'sessions/show'
-  get 'users/show'
+  root 'users#show'
   devise_for :users
   resources :users, only: [:show]
-  root 'users#show'
+  resources :sessions, only: [:index]
 end
