@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :login_required, only: %i[index edit update destroy]
+  before_action :current_user?, only: %i[edit update]
+
   def index
     @users = User.paginate(page: params[:page])
   end
