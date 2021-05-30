@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'groups/index'
+  get 'groups/show'
+  get 'groups/new'
   root 'users#show'
 
   devise_for :users
