@@ -22,6 +22,7 @@ class StudySessionsController < ApplicationController
 
 
   def show
+  @study_session = StudySession.find(params[:id])
   end
 
   private
