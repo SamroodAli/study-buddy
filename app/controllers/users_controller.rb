@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def new
@@ -49,7 +49,6 @@ class UsersController < ApplicationController
 
   def login_required
     return if logged_in?
-
     store_original_url
     flash[:danger] = 'PLease log in'
     redirect_to login_url
