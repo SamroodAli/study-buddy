@@ -1,6 +1,10 @@
 {
   "name": "study-buddy",
   "private": true,
+  "scripts": {
+    "lint": "stylelint '**/*.scss' --fix",
+    "sass": "sass './css/scss/main.scss' './css/main.css'"
+  },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "@rails/actioncable": "^6.0.0",
@@ -15,6 +19,10 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.19.0",
     "webpack-dev-server": "^3.11.2"
   }
 }

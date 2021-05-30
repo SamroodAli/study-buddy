@@ -1,16 +1,7 @@
-.bg-gradient{
-  background: linear-gradient(#2E68A8 45%, #2770A7 92%), #2E68A8;
-  #sidebarToggleTop{
-    color: white;
-    &:hover{
-      background-color: #2E68A8;
-    }
-  }
-}
 
 .navbar{
   color: var(--bs-blue);
-  background: linear-gradient(#3573bb 45%, #2770A7 92%);
+  background: linear-gradient(#1C4C7F 45%, #2770A7 92%);
   flex-wrap: nowrap;
   padding: 1rem 1rem;
   .navbar-brand{
