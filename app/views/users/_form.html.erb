@@ -8,7 +8,7 @@
   <%= form.password_field :password ,class:"form-control"%>
   <%= form.label :password_confirmation,"Confirmation" %>
   <%= form.password_field :password_confirmation ,class:"form-control"%>
-  <%= form.submit user_button, class:"btn btn-primary" %>
+  <%= form.submit user_button(@user), class:"btn btn-primary" %>
 <% end %>
 <% if !@user.new_record? %>
   <div class="gravatar_edit">
