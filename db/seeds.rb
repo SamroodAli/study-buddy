@@ -39,3 +39,9 @@ User.create!( name:  "Nasser",
               password:              "passpass",
               password_confirmation: "passpass",
             )
+
+
+
+User.first.sessions.create!(
+  name:"Learning Algorithm"
+)
