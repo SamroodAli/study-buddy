@@ -4,4 +4,5 @@ class StudySession < ApplicationRecord
   belongs_to :collection
   has_many :collaborations
   has_many :participants, through: :collaborations
+  scope :total, -> {sum(:duration) }
 end

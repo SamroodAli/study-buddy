@@ -1,7 +1,7 @@
 class StudySessionsController < ApplicationController
   def index
     @study_sessions = current_user.study_sessions
-    @total = @study_sessions.map(&:duration).sum
+    @total = @study_sessions.total
   end
 
   def new
@@ -10,6 +10,7 @@ class StudySessionsController < ApplicationController
 
   def external
     @study_sessions = current_user.collections.external.study_sessions
+    @total = @study_sessions.total
     render :index
   end
 
