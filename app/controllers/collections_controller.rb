@@ -4,7 +4,13 @@ class CollectionsController < ApplicationController
   end
 
   def show
-    @collection = collection.find(params[:id])
+    @collection = Collection.find(params[:id])
+  end
+
+
+  def external
+    @study_sessions = current_user.collections.find_by(external: true).study_sessions
+    render 'study_sessions/index'
   end
 
   def new

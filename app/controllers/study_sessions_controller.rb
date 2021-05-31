@@ -24,6 +24,6 @@ class StudySessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:study_session).permit(:name, :user_id, :group_id)
+    params.require(:study_session).permit(:name, :user_id, :collection_id)
   end
 end
