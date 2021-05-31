@@ -3,7 +3,9 @@ class GroupsController < ApplicationController
     @groups = current_user.groups
   end
 
-  def show; end
+  def show; 
+  @group = Group.find(params[:id])
+  end
 
   def new
     @group = current_user.groups.build
