@@ -3,5 +3,5 @@ class Collection < ApplicationRecord
   belongs_to :user
   has_many :memberships, foreign_key: :participating_collection_id
   has_many :members, through: :memberships
-  scope :external, -> { find_by(external: true)}
+  scope :external, -> { find_by(external: true) }
 end

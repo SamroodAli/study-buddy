@@ -7,12 +7,9 @@ class CollectionsController < ApplicationController
     @collection = Collection.find(params[:id])
   end
 
-
-
-
   def new
     @collection = current_user.collections.build
-  end 
+  end
 
   def create
     @collection = current_user.collections.create(collection_params)

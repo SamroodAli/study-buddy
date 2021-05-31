@@ -1,12 +1,11 @@
 <%= link_to study_session ,class:"nav-link" do%>
+  <hr>
   <li>
     Name: <%= study_session.name %>
     <br>
     Collection: <%= study_session.collection.name %>
     <br>
     <p>Total duration : <%= distance_of_time_in_words(study_session.duration) %></p>
-    <br>
     Created At<%= study_session.created_at %>
-    <br>
   </li>
 <% end %>

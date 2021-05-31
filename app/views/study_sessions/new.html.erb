@@ -1,7 +1,7 @@
 <%= form_with model: @study_session, local: true do |form|%>
   <%= form.label :name %>
   <br>
-  <%= form.text_field :name %>
+  <%= form.text_field :name ,required: true%>
   <br>
   <%= form.label :collection %>
   <% collection_array = current_user.collections.map { |collection| [collection.name, collection.id] } %>
