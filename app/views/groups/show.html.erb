@@ -1,4 +1,5 @@
-<%= @group.name %>
+<h1><%= @group.name %></h1>
+<hr>
 <% @group.study_sessions.each do |session| %>
   <%= session.name %>
 <% end %>
