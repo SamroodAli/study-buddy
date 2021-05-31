@@ -1,2 +1,4 @@
-<h1>Groups#show</h1>
-<p>Find me in app/views/groups/show.html.erb</p>
+<%= @group.name %>
+<% @group.study_sessions.each do |session| %>
+  <%= session.name %>
+<% end %>
