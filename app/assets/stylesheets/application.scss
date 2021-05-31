@@ -1,5 +1,5 @@
-
-.navbar{
+.navbar
+{
   color: var(--bs-blue);
   background: linear-gradient(#1C4C7F 45%, #2770A7 92%);
   flex-wrap: nowrap;
@@ -19,3 +19,8 @@
     color: white;
   }
 }
+
+// .alert,.notice{
+  // position:absolute;
+  // color:white;
+// }
