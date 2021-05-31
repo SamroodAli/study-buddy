@@ -20,7 +20,12 @@
   }
 }
 
-// .alert,.notice{
-  // position:absolute;
-  // color:white;
-// }
+.alert,.notice{
+  position:absolute;
+  color:white;
+}
+
+input.nav-link{
+  background-color: rgba(0, 0,0, 0);
+  border: 0;
+}

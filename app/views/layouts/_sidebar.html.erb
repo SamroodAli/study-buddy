@@ -5,13 +5,54 @@
     </a>
     <hr class="sidebar-divider my-0">
     <ul class="navbar-nav text-light" id="accordionSidebar">
-      <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Sessions</span></a><a class="nav-link" href="table.html"><i class="fa fa-group"></i><span>Users</span></a><a class="nav-link" href="table.html"><i class="fa fa-th-large"></i><span>Groups</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Login</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
-      <li>
-        <%= button_to "Log out", logout_path, method: :delete %>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile.html">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="table.html">
+          <i class="fas fa-table"></i>
+          <span>Sessions</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="table.html">
+          <i class="fa fa-group"></i>
+          <span>Users</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="table.html">
+          <i class="fa fa-th-large">
+          </i>
+          <span>Groups</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">
+            <i class="far fa-user-circle">
+            </i><span>Login</span>
+          </a>
+        </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register.html">
+          <i class="fas fa-user-circle"></i>
+          <span>Register</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <%= button_to 'Log out', logout_path, :method => :delete, data: {:confirm => "You sure you want to log out?" } ,
+                            :title => "log out",class:"nav-link"%>
       </li>
     </ul>
     <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
