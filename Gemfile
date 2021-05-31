@@ -26,8 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-# Use postgresql as the database for Active Record
 gem 'bootstrap-will_paginate', '1.0.0'
+# Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'will_paginate', '3.3.0'
 
