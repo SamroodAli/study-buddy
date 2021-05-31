@@ -1,6 +1,12 @@
 <h1><%= @user.name %>
+  <br>
   <%= link_to 'All my study sessions', study_sessions_path %>
+  <br>
   <%= link_to 'All external study sessions',external_path%>
-  <%= link_to 'All Collections',collections_path%>
+  <br>
+  <%= link_to 'All my Collections',collections_path%>
+  <br>
+  <%= link_to "All user's collections", all_collections_path %>
+  <br>
   <%= link_to 'All Users', users_path %>
 </h1>

@@ -1,3 +1,6 @@
 <li>
-  <%= link_to collection.name, collection %>
+  <%= link_to collection do%>
+    <p>Name: <%= collection.name %></p>
+    <p>Created at: <%= collection.created_at %></p>
+  <% end %>
 </li>

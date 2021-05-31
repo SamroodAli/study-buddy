@@ -1,4 +1,5 @@
 class Collection < ApplicationRecord
+  scope :internal, -> { where(external: false) }
   has_many :study_sessions
   belongs_to :user
   has_many :memberships, foreign_key: :participating_collection_id

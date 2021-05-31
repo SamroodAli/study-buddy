@@ -4,7 +4,7 @@ class CollectionsController < ApplicationController
   end
 
   def all
-    @collections = Collection.all
+    @collections = Collection.internal.all
     render :index
   end
 
