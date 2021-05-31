@@ -8,7 +8,9 @@ include ActionView::Helpers::TextHelper
 include ActionView::Helpers::NumberHelper
 
   def time(input)
+    return DateTime.now if input.blank?
     DateTime.parse(input)
+
   end
 
   def calc_duration(duration_start,duration_end)
