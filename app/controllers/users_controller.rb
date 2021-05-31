@@ -21,10 +21,10 @@ class UsersController < ApplicationController
     if @user.valid? && @user.save
       log_in @user
       flash[:success] = 'Welcome to Study Buddy'
-      @user.groups.create(name:"Not in any group",external:true)
+      @user.collections.create(name: 'Not in any collection', external: true)
       redirect_to @user
     else
-      flash[:notice] = "Sorry, no login"
+      flash[:notice] = 'Sorry, no login'
       render :new
     end
   end
@@ -53,6 +53,7 @@ class UsersController < ApplicationController
 
   def login_required
     return if logged_in?
+
     store_original_url
     flash[:danger] = 'PLease log in'
     redirect_to login_url

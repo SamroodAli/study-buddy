@@ -2,7 +2,7 @@
 <%= form_with model: @study_session, local: true do |form|%>
   <%= form.label :name %>
   <%= form.text_field :name %>
-  <% group_array = current_user.groups.map { |group| [group.name, group.id] } %>
-  <%= select(:study_session,:group_id,group_array) %>
+  <% collection_array = current_user.collections.map { |collection| [collection.name, collection.id] } %>
+  <%= select(:study_session,:collection_id,collection_array) %>
   <%= form.submit "Submit", class:"" %>
 <% end %>

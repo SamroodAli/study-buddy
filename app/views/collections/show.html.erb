@@ -1,0 +1,5 @@
+<h1><%= @collection.name %></h1>
+<hr>
+<% @collection.study_sessions.each do |session| %>
+  <%= session.name %>
+<% end %>

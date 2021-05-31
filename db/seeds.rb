@@ -42,7 +42,7 @@ User.create!( name:  "Nasser",
               password_confirmation: "passpass",
 )
             
-User.first.groups.create(name:"non group")
+User.first.collections.create(name:"non collection")
 
 User.first.study_sessions.create!(
   name:"Learning Algorithm",

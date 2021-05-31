@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-  has_many :study_sessions,foreign_key: :author_id,class_name: :StudySession
-  has_many :groups
+  has_many :study_sessions, foreign_key: :author_id, class_name: :StudySession
+  has_many :collections
   has_many :collaborations, foreign_key: :participant_id
   has_many :collaborative_sessions, through: :collaborations, source: :study_session
   has_many :memberships, foreign_key: :member_id
-  has_many :participating_groups, through: :memberships
+  has_many :participating_collections, through: :memberships
 
   attr_accessor :remember_token
 
