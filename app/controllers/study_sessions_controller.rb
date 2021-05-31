@@ -7,6 +7,11 @@ class StudySessionsController < ApplicationController
     @study_session = current_user.study_sessions.build
   end
 
+  def external
+    @study_sessions = current_user.collections.external.study_sessions
+    render :index
+  end
+
   def create
     @study_session = current_user.study_sessions.build(session_params)
     if @study_session.save

@@ -8,14 +8,11 @@ class CollectionsController < ApplicationController
   end
 
 
-  def external
-    @study_sessions = current_user.collections.find_by(external: true).study_sessions
-    render 'study_sessions/index'
-  end
+
 
   def new
     @collection = current_user.collections.build
-  end
+  end 
 
   def create
     @collection = current_user.collections.create(collection_params)
