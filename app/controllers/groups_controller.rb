@@ -12,7 +12,8 @@ class GroupsController < ApplicationController
   end
 
   def create
-    current_user.groups.create(group_params)
+    @group = current_user.groups.create(group_params)
+    redirect_to @group
   end
 
   private
