@@ -1,8 +1,12 @@
 <%= link_to study_session ,class:"nav-link" do%>
   <li>
-    <%= study_session.name %>
-    <%= study_session.collection.name %>
-    <%= study_session.duration %>
-    <%= study_session.created_at %>
+    Name: <%= study_session.name %>
+    <br>
+    Collection: <%= study_session.collection.name %>
+    <br>
+    Duration: <%= study_session.duration %>
+    <br>
+    Created At<%= study_session.created_at %>
+    <br>
   </li>
 <% end %>

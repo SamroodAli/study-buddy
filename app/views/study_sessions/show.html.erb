@@ -1,3 +1,7 @@
-<%= @study_session.name %>
-<%= @study_session.created_at %>
-<%= @study_session.collection.name %>
+Name: <%= @study_session.name %>
+<br>
+Created at: <%= @study_session.created_at %>
+<br>
+Colection: <%= @study_session.collection.name %>
+<br>
+Duration : <%= @study_session.duration.strftime("%I:%M %p") %>

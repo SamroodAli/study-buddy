@@ -14,6 +14,7 @@ class StudySessionsController < ApplicationController
 
   def create
     @study_session = current_user.study_sessions.build(session_params)
+    @study_session.duration = DateTime.parse(session_params[:duration]).strftime("%k:%M")
     if @study_session.save
       redirect_to @study_session
     else
