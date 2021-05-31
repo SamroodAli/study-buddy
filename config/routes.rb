@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/external',      to:'study_sessions#external'
 
   resources :study_sessions, only:[:index,:new,:create,:show],member: {external: :get}
-  resources :collections, only: [:index,:new,:create,:show]
+  resources :collections, only: [:index,:new,:create,:show] do
+    get :all , on: :collection
+  end
   resources :users
 end

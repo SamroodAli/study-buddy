@@ -3,6 +3,11 @@ class CollectionsController < ApplicationController
     @collections = current_user.collections
   end
 
+  def all
+    @collections = Collection.all
+    render :index
+  end
+
   def show
     @collection = Collection.find(params[:id])
   end
