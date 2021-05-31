@@ -14,13 +14,15 @@ class StudySessionsController < ApplicationController
   end
 
   def create
-    @study_session = current_user.study_sessions.build
-    start_time = DateTime.parse(session_params[:duration_start])
-    end_time = DateTime.parse(session_params[:duration_end])
-    duration = end_time - start_time
+    duration_start = time(session_params[:duration_start])
+    duration_end = time(session_params[:duration_end])
+    duration = calc_duration(duration_start,duration_end)
+
+    @study_session = current_user.study_sessions.build(session_params)
     @study_session.update(
-      name:session_params[:name],
-      collection_id:session_params[:collection_id],
+      name: session_params[:name],
+      duration_start: duration_start,
+      duration_end:duration_end,
       duration:duration
     )
     if @study_session.save

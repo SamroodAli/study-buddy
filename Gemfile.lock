@@ -81,6 +81,9 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
+    dotiw (5.3.1)
+      activesupport
+      i18n
     erubi (1.10.0)
     ffi (1.15.1)
     globalid (0.4.2)
@@ -209,6 +212,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 1.0.0)
   byebug
   capybara (>= 3.26)
+  dotiw
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (>= 0.18, < 2.0)

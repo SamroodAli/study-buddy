@@ -4,7 +4,7 @@
   <%= form.text_field :name %>
   <% collection_array = current_user.collections.map { |collection| [collection.name, collection.id] } %>
   <%= select(:study_session,:collection_id,collection_array) %>
-  <%= time_select :study_session,:duration_start,default:{hour:0,min:0} %>
-  <%= time_select :study_session, :duration_end,default:{hour:Time.now.hour,min: Time.now.min} %>
+  <%= time_field :study_session,:duration_start %>
+  <%= time_field :study_session,:duration_end %>
   <%= form.submit "Submit", class:"" %>
 <% end %>
