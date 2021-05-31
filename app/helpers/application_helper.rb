@@ -1,4 +1,12 @@
+require 'dotiw'
+
+
 module ApplicationHelper
+  
+include ActionView::Helpers::DateHelper
+include ActionView::Helpers::TextHelper
+include ActionView::Helpers::NumberHelper
+
   def time(input)
     DateTime.parse(input)
   end

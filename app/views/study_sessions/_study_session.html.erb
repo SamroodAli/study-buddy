@@ -4,7 +4,7 @@
     <br>
     Collection: <%= study_session.collection.name %>
     <br>
-    Duration: <%= study_session.duration %>
+    <p>Total duration : <%= distance_of_time_in_words(study_session.duration) %></p>
     <br>
     Created At<%= study_session.created_at %>
     <br>
