@@ -5,7 +5,7 @@ class StudySessionsController < ApplicationController
   end
 
   def new
-    @collections = current_user.available_groups_for_select
+    @collections = current_user.available_collections_for_select
     @selected = @collections[0]
     @study_session = current_user.study_sessions.build
   end

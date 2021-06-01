@@ -53,11 +53,11 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
-   def available_groups
+   def available_collections
     [collections.my_external] + Collection.internal
   end
 
-  def available_groups_for_select
+  def available_collections_for_select
     available_groups.map { |collection| [collection.name, collection.id] }
   end
 end
