@@ -6,6 +6,8 @@
     Collection: <%= study_session.collection.name %>
     <br>
     <p>Total duration : <%= distance_of_time_in_words(study_session.duration) %></p>
-    Created At<%= study_session.created_at %>
+    <p>Created At<%= study_session.created_at %></p>
+    <p><%= study_session.author.name if author%>
+    </p>
   </li>
 <% end %>

@@ -1,5 +1,5 @@
 <p>Total duration : <%= distance_of_time_in_words(@total) %></p>
 <% if @study_sessions.any? %>
-  <%= render @study_sessions %>
+  <%= render @study_sessions ,author: false%>
 <% end %>
 <%= link_to 'New session', new_study_session_path %>
