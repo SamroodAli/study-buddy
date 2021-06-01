@@ -1,31 +1,35 @@
-.navbar
-{
+.navbar {
   color: var(--bs-blue);
-  background: linear-gradient(#1C4C7F 45%, #2770A7 92%);
+  background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
   flex-wrap: nowrap;
   padding: 1rem 1rem;
-  .navbar-brand{
+
+  .navbar-brand {
     color: white;
     font-size: 1rem;
   }
-  button{
+
+  button {
     color: white;
-    &:hover{
+
+    &:hover {
       color: white;
     }
   }
-  i{
+
+  i {
     margin-right: 1rem;
     color: white;
   }
 }
 
-.alert,.notice{
-  position:absolute;
-  color:white;
+.alert,
+.notice {
+  position: absolute;
+  color: white;
 }
 
-input.nav-link{
-  background-color: rgba(0, 0,0, 0);
+input.nav-link {
+  background-color: rgba(0, 0, 0, 0);
   border: 0;
 }
