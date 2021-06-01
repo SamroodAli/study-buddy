@@ -6,6 +6,7 @@ class StudySessionsController < ApplicationController
 
   def new
     @study_session = current_user.study_sessions.build
+    @collection = current_user.collection.external
   end
 
   def external
