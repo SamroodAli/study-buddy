@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   get     '/login',     to:'sessions#new'
   post    '/login',     to:'sessions#create'
   delete  '/logout',    to:'sessions#destroy'
-  get '/external',      to:'study_sessions#external'
 
-  resources :study_sessions, only:[:index,:new,:create,:show],member: {external: :get}
+  resources :study_sessions, only:[:index,:new,:create,:show] do
+    get :external, on: :collection
+  end
   resources :collections, only: [:index,:new,:create,:show] do
     get :all , on: :collection
   end

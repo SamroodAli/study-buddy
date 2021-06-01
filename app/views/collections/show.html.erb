@@ -1,3 +1,4 @@
 <h1><%= @collection.name %></h1>
 <hr>
 <%= render @collection.study_sessions, author: true %>
+<%= link_to 'New session', new_study_session_path %>
