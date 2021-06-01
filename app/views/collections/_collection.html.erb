@@ -1,6 +1,9 @@
 <li>
   <%= link_to collection do%>
     <p>Name: <%= collection.name %></p>
+    <% if collection.image.attached? %>
+      <p>Icon:<%= image_tag collection.image,class:"icon"%></p>
+    <% end %>
     <p>Created at: <%= collection.created_at %></p>
   <% end %>
 </li>
