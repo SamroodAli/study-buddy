@@ -44,3 +44,23 @@ input.nav-link {
   height: 4em;
   width: 4em;
 }
+
+.blue-section{
+  background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  a{
+    margin: 2rem;
+    display: block;
+    padding-bottom: 0.3rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
