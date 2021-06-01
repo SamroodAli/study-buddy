@@ -11,7 +11,10 @@ module ApplicationHelper
     DateTime.parse(input)
   end
 
-  def calc_duration(duration_start, duration_end)
+  def calc_duration(params)
+    duration_start = time(session_params[:duration_start])
+    duration_end = time(session_params[:duration_end])
+    return false if duration_start > duration_end
     hours = duration_end.hour - duration_start.hour
     min = duration_end.minute - duration_start.minute
     min += hours * 60
