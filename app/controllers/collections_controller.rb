@@ -27,6 +27,7 @@ class CollectionsController < ApplicationController
 
   def create
     @collection = current_user.collections.create(collection_params)
+    @collection.image.attach(params[:collection][:image])
     redirect_to @collection
   end
 
