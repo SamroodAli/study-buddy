@@ -5,7 +5,8 @@ class StudySessionsController < ApplicationController
   end
 
   def new
-    @collections = current_user.collections.map { |collection| [collection.name, collection.id] }
+    @collections = [current_user.collections.my_external] + Collection.internal
+    @collections = @collections.map { |collection| [collection.name, collection.id] }
     @selected = @collections[0]
     @study_session = current_user.study_sessions.build
   end
