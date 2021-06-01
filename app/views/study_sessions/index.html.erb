@@ -1,5 +1,7 @@
-<p>Total duration : <%= distance_of_time_in_words(@total) %></p>
 <% if @study_sessions.any? %>
-  <%= render @study_sessions ,author: false%>
+  <p>Total duration : <%= distance_of_time_in_words(@total) %></p>
+  <div class="accordion" id="accordionExample">
+    <%= render @study_sessions ,author: false%>
+  </div>
 <% end %>
 <%= link_to 'Create new session', new_study_session_path %>
