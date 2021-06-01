@@ -1,6 +1,20 @@
 <%= form_with model: @collection, local: true do |form|%>
+  <br>
   <%= form.label :name %>
   <%= form.text_field :name %>
-  <%= form.submit "Submit", class:"" %>
-  <%= form.file_field :image%>
+  <br>
+  <br>
+  <%=  form.file_field :image, accept: "image/jpeg, image/gif, image/png"%>
+  <br>
+  <br>
+  <%= form.submit "Submit" %>
 <% end %>
+<script type="text/javascript">
+  document.querySelector('#collection_image').addEventListener('change',function fileSizeChecker(){
+    const size_in_megabytes = this.files[0].size/1024/1024;
+      if (size_in_megabytes > 5) {
+            alert("Maximum file size is 5MB. Please choose a smaller file.");
+            this.value = ''
+      }
+  })
+</script>
