@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
   resources :collections, only: [:index,:new,:create,:show] do
     get :all , on: :collection
+    get :group_session, on: :member
   end
   resources :users
 end
