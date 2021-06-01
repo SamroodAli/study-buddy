@@ -46,5 +46,14 @@ User.first.collections.create(name:"non collection")
 
 User.first.study_sessions.create!(
   name:"Learning Algorithm",
-  group_id:1
+  collection_id:1
 )
+
+
+99.times do |n|
+  User.create!( name:  "{name-#{n}",
+              email: "example-#{n}@study.org",
+              password:              "passpass",
+              password_confirmation: "passpass",
+)
+end

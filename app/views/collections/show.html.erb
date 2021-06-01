@@ -1,5 +1,5 @@
 <h1><%= @collection.name %></h1>
-<%= image_tag @collection.image if @collection.image.attached?%>
+<%= image_tag @collection.image,class:"icon" if @collection.image.attached?%>
 <hr>
 <%= render @collection.study_sessions, author: true %>
 <%= link_to 'Create new session in this group', new_session_collection_path ,class:"icon"  %>

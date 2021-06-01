@@ -13,7 +13,5 @@ class Collection < ApplicationRecord
                             message: 'should be less than 5MB' }
 
 
-  def display_image
-    image.variant(resize_to_limit:[100,100])
-  end
+  
 end
