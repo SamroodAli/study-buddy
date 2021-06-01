@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post    '/login',     to:'sessions#create'
   delete  '/logout',    to:'sessions#destroy'
 
-  resources :study_sessions, only:[:index,:new,:create,:show] do
+  resources :study_sessions, only:[:index,:new,:create,:show,:update] do
     get :external, on: :collection
   end
   resources :collections, only: [:index,:new,:create,:show] do
