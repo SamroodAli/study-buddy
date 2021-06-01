@@ -9,3 +9,7 @@ Created at: <%= @study_session.created_at %>
 Collection: <%= @study_session.collection.name %>
 <br>
 Duration : <%= distance_of_time_in_words(@study_session.duration)%>
+<%= form_with model: @study_session, local: true do |form|%>
+  <%= form.text_field :note %>
+  <%= form.submit "Submit", class:"" %>
+<% end %>
