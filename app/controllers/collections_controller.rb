@@ -20,7 +20,7 @@ class CollectionsController < ApplicationController
     current_collection = Collection.find(params[:id])
     @collections = current_user.available_collections_for_select
     current_collection_id = @collections.find_index([current_collection.name, current_collection.id])
-    
+
     @selected = @collections[current_collection_id]
     @study_session = current_user.study_sessions.build
     render 'study_sessions/new'
@@ -37,5 +37,4 @@ class CollectionsController < ApplicationController
   def collection_params
     params.require(:collection).permit(:name, :image)
   end
-
-  end
+end

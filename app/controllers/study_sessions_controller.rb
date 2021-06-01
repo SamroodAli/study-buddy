@@ -6,7 +6,7 @@ class StudySessionsController < ApplicationController
 
   def new
     @collections = current_user.available_collections_for_select
-    @selected = @collections[0]
+    @selected = @collections.first
     @study_session = current_user.study_sessions.build
   end
 
@@ -32,7 +32,6 @@ class StudySessionsController < ApplicationController
     end
   end
 
-
   def update
     @study_session = StudySession.find(params[:id])
     @study_session.update(session_params)
@@ -46,7 +45,6 @@ class StudySessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:study_session).permit(:name, :user_id, :collection_id, :duration_start, :duration_end,:note)
+    params.require(:study_session).permit(:name, :user_id, :collection_id, :duration_start, :duration_end, :note)
   end
-
 end

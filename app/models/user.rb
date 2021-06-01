@@ -53,7 +53,7 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
-   def available_collections
+  def available_collections
     [collections.my_external] + Collection.internal
   end
 
