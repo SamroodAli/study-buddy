@@ -6,6 +6,7 @@ class StudySessionsController < ApplicationController
 
   def new
     @collections = current_user.collections.map { |collection| [collection.name, collection.id] }
+    @selected = @collections[0]
     @study_session = current_user.study_sessions.build
   end
 

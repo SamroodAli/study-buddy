@@ -17,7 +17,9 @@ class CollectionsController < ApplicationController
   end
 
   def new_group_session
-    @study_session = current_user.study_sessions.build(collection_id:params[:id])
+    @collections = current_user.collections.map { |collection| [collection.name, collection.id] }
+    @selected = @collections[Collection.find(params[:id])]
+    @study_session = current_user.study_sessions.build
     render 'study_session#new'
   end
 
