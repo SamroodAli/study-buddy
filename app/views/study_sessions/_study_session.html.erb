@@ -4,6 +4,9 @@
     Name: <%= study_session.name %>
     <br>
     <%= "Collection: " +study_session.collection.name if study_session.collection.external == false%>
+    <% if study_session.collection.image.attached? %>
+      <%= image_tag study_session.collection.image,class:"icon" %>
+    <% end %>
     <p>Total duration : <%= distance_of_time_in_words(study_session.duration) %></p>
     <p>Created at :<%= study_session.created_at %></p>
     <p><%= study_session.author.name if author%>
