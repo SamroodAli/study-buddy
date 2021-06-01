@@ -16,6 +16,11 @@ class CollectionsController < ApplicationController
     @collection = current_user.collections.build
   end
 
+  def new_group_session
+    @study_session = current_user.study_sessions.build(collection_id:params[:id])
+    render 'study_session#new'
+  end
+
   def create
     @collection = current_user.collections.create(collection_params)
     redirect_to @collection

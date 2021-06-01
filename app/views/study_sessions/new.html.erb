@@ -4,8 +4,7 @@
   <%= form.text_field :name ,required: true%>
   <br>
   <%= form.label :collection %>
-  <% collection_array = current_user.collections.map { |collection| [collection.name, collection.id] } %>
-  <%= select(:study_session,:collection_id,collection_array) %>
+  <%= form.select :collection_id, @collections, :selected => @selected %>
   <br>
   <%= form.label :duration_start %>
   <%= time_field :study_session,:duration_start, required: true%>

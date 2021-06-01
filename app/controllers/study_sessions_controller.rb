@@ -5,8 +5,8 @@ class StudySessionsController < ApplicationController
   end
 
   def new
+    @collections = current_user.collections.map { |collection| [collection.name, collection.id] }
     @study_session = current_user.study_sessions.build
-    @collection = current_user.collection.external
   end
 
   def external
