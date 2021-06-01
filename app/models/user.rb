@@ -52,4 +52,12 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+   def available_groups
+    [collections.my_external] + Collection.internal
+  end
+
+  def available_groups_for_select
+    available_groups.map { |collection| [collection.name, collection.id] }
+  end
 end
