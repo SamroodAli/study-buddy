@@ -1,4 +1,8 @@
 Name: <%= @study_session.name %>
+<%= link_to @study_session.collection.name, @study_session.collection  if @study_session.collection.external == false%>
+<% if @study_session.collection.image.attached? %>
+  <p>Icon:<%= image_tag @study_session.collection.image,class:"icon"%></p>
+<% end %>
 <br>
 Created at: <%= @study_session.created_at %>
 <br>
