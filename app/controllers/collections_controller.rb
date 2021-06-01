@@ -18,9 +18,9 @@ class CollectionsController < ApplicationController
 
   def new_session
     current_collection = Collection.find(params[:id])
-    @collections = [current_user.collections.my_external] + Collection.internal
-    @collections = @collections.map { |collection| [collection.name, collection.id] }
+    @collections = current_user.available_collections_for_select
     current_collection_id = @collections.find_index([current_collection.name, current_collection.id])
+    
     @selected = @collections[current_collection_id]
     @study_session = current_user.study_sessions.build
     render 'study_sessions/new'

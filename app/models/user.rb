@@ -58,6 +58,6 @@ class User < ApplicationRecord
   end
 
   def available_collections_for_select
-    available_groups.map { |collection| [collection.name, collection.id] }
+    available_collections.map { |collection| [collection.name, collection.id] }
   end
 end
