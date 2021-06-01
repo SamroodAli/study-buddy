@@ -11,7 +11,7 @@ class StudySessionsController < ApplicationController
   end
 
   def external
-    @study_sessions = current_user.collections.external.study_sessions
+    @study_sessions = current_user.collections.my_external.study_sessions
     @total = @study_sessions.total
     render :index
   end
@@ -34,6 +34,13 @@ class StudySessionsController < ApplicationController
     end
   end
 
+
+  def update
+    @study_session = StudySession.find(params[:id])
+    @study_session.update(session_params)
+    redirect_to @study_session
+  end
+
   def show
     @study_session = StudySession.find(params[:id])
   end
@@ -41,6 +48,6 @@ class StudySessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:study_session).permit(:name, :user_id, :collection_id, :duration_start, :duration_end)
+    params.require(:study_session).permit(:name, :user_id, :collection_id, :duration_start, :duration_end,:note)
   end
 end

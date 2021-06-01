@@ -11,5 +11,5 @@ Collection: <%= @study_session.collection.name %>
 Duration : <%= distance_of_time_in_words(@study_session.duration)%>
 <%= form_with model: @study_session, local: true do |form|%>
   <%= form.text_field :note %>
-  <%= form.submit "Submit", class:"" %>
+  <%= form.submit "Submit", placeholder:'sdas',class:""%>
 <% end %>

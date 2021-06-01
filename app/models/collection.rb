@@ -1,6 +1,7 @@
 class Collection < ApplicationRecord
   scope :internal, -> { where(external: false) }
-  scope :external, -> { find_by(external: true) }
+  scope :external, -> { where(external: true) }
+  scope :my_external, -> { find_by(external: true) }
   has_many :study_sessions
   belongs_to :user
   has_many :memberships, foreign_key: :participating_collection_id
