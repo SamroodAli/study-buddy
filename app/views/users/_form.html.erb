@@ -11,8 +11,6 @@
   <%= form.submit user_button(@user), class:"btn btn-primary" %>
 <% end %>
 <% if !@user.new_record? %>
-  <div class="gravatar_edit">
-    <%= gravatar_for @user %>
-    <a href="https://gravatar.com/emails" target="_blank" rel="noopener"> change</a>
-  </div>
+  <%= gravatar_for @user %>
+  <a href="https://gravatar.com/emails" target="_blank" rel="noopener"> change</a>
 <% end %>
