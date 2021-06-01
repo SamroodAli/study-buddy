@@ -45,12 +45,13 @@ input.nav-link {
   width: 4em;
 }
 
-.blue-section{
+.blue-section {
   background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
   height: 100vh;
   display: flex;
   flex-direction: column;
-  a{
+
+  a {
     margin: 1rem;
     display: block;
     padding-bottom: 0.3rem;
@@ -59,8 +60,15 @@ input.nav-link {
     border-bottom: 1px solid white;
     width: 100%;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
+}
+
+.gravatar {
+  float: left;
+  width: 6em;
+  border-radius: 50%;
+  margin: auto;
 }
