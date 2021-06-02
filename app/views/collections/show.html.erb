@@ -3,5 +3,5 @@
   <%= link_to 'Collection sessions', sessions_collection_path(@collection) %>
   <h1 class="text-light text-center"><%= @collection.name  %></h1>
   <%= render @collection.study_sessions, author: true %>
-  <%= link_to 'Create new session in this group', new_session_collection_path ,class:"btn btn-success"  %>
+  <%= link_to 'Create new session in this group', new_session_collection_path %>
 </div>
