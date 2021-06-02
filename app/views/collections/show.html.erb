@@ -2,4 +2,4 @@
 <%= image_tag @collection.image,class:"icon" if @collection.image.attached?%>
 <hr>
 <%= render @collection.study_sessions, author: true %>
-<%= link_to 'Create new session in this group', new_session_collection_path ,class:"icon"  %>
+<%= link_to 'Create new session in this group', new_session_collection_path ,class:"btn btn-success"  %>
