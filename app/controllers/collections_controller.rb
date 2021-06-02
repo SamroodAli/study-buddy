@@ -16,6 +16,13 @@ class CollectionsController < ApplicationController
     @collection = current_user.collections.build
   end
 
+  def sessions
+    @collection = Collection.find(params[:id])
+    @study_sessions = @collection.study_sessions
+    @total = @study_sessions.total
+    render 'study_sessions/index'
+  end
+
   def new_session
     current_collection = Collection.find(params[:id])
     @collections = current_user.available_collections_for_select

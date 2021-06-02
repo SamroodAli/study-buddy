@@ -1,9 +1,19 @@
+<% if @collection %>
+  <h1 class="text-center"><%= @collection.name %>
+  </h1>
+<% end %>
 <% if @study_sessions.any? %>
   <p class="card p-3">Total duration : <%= distance_of_time_in_words(@total) %></p>
   <div class="accordion" id="accordionExample">
     <%= render @study_sessions ,author: false%>
   </div>
 <% end %>
-<div class="bg-green">
-  <%= link_to 'Create new session', new_study_session_path ,  class:"btn btn-bottom"%>
-</div>
+<% if request.url.include?("collections") %>
+  <div class="bg-green">
+    <%= link_to "Create new session in #{@collection.name}", new_session_collection_path(@collection) ,  class:"btn btn-bottom"%>
+  </div>
+<% else %>
+  <div class="bg-green">
+    <%= link_to 'Create new session', new_study_session_path ,class:"btn btn-bottom"%>
+  </div>
+<% end %>
