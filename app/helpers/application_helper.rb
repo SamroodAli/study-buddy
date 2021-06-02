@@ -11,8 +11,7 @@ module ApplicationHelper
     DateTime.parse(input)
   end
 
-  def calc_duration(duration_start,duration_end)
-
+  def calc_duration(duration_start, duration_end)
     return false if duration_start > duration_end
 
     hours = duration_end.hour - duration_start.hour

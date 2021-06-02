@@ -1,9 +1,14 @@
-<li>
-  <%= link_to collection do%>
-    <p>Name: <%= collection.name %></p>
-    <% if collection.image.attached? %>
-      <p>Icon:<%= image_tag collection.image,class:"icon"%></p>
-    <% end %>
-    <p>Created at: <%= collection.created_at %></p>
-  <% end %>
-</li>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#id-<%=collection.id%>" aria-expanded="false" aria-controls="id-<%=collection.id%>">
+      <p>Name: <%= collection.name %></p>
+    </button>
+  </h2>
+  <div id="id-<%=collection.id%>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <p>Icon:<%= image_tag collection.image,class:"icon" if collection.image.attached?%></p>
+      <p>Created at: <%= collection.created_at %></p>
+      <%= link_to "View this group", collection ,class:"btn btn-success"%>
+    </div>
+  </div>
+</div>

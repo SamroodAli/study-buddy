@@ -1,7 +1,7 @@
 <%= form_with model: @collection, local: true do |form|%>
   <br>
   <%= form.label :name %>
-  <%= form.text_field :name %>
+  <%= form.text_field :name ,required: true%>
   <br>
   <br>
   <%=  form.file_field :image, accept: "image/jpeg, image/gif, image/png"%>
