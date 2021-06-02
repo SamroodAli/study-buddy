@@ -6,9 +6,9 @@
   </h2>
   <div id="id-<%=study_session.id%>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
     <div class="accordion-body">
-      <p><%= "Collection: " +study_session.collection.name if study_session.collection.external == false%></p>
-      <p><%= image_tag study_session.collection.image,class:"icon" if study_session.collection.image.attached?%></p>
-      <p>Total duration : <%= distance_of_time_in_words(study_session.duration) %></p>
+      <p><%= image(study_session)%></p>
+      <p><%= study_session.collection_name %></p>
+      <p> <%= duration(study_session) %></p>
       <p>Created at :<%= study_session.created_at %></p>
       <p><%= study_session.author.name if author%></p>
       <%= link_to "View this session", study_session ,class:"btn btn-success w-100  "%>
