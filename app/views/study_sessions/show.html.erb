@@ -1,15 +1,16 @@
-Name: <%= @study_session.name %>
-<%= link_to @study_session.collection.name, @study_session.collection  if @study_session.collection.external == false%>
-<% if @study_session.collection.image.attached? %>
-  <p>Icon:<%= image_tag @study_session.collection.image,class:"icon"%></p>
-<% end %>
-<br>
-Created at: <%= @study_session.created_at %>
-<br>
-Collection: <%= @study_session.collection.name %>
-<br>
-Duration : <%= distance_of_time_in_words(@study_session.duration)%>
-<%= form_with model: @study_session, local: true,class:"form-control mt-3" do |form|%>
-  <%= form.text_area :note %>
-  <%= form.submit "Submit", placeholder:'sdas', class:"btn btn-success w-100"%>
-<% end %>
+<div class="user">
+  <div class="user-name container card">
+    <p><%= image(@study_session) %></p>
+    <p><%= link_to @study_session.collection.name, @study_session.collection  if @study_session.collection.external == false%></p>
+    <p><%= @study_session.name %></p>
+  </div>
+  <div class="card">
+    <p>Created: <%= @study_session.created_at %></p>
+    <p>Collection: <%= @study_session.collection.name %></p>
+  </div>
+  Duration : <%= distance_of_time_in_words(@study_session.duration)%>
+  <%= form_with model: @study_session, local: true,class:"form-control mt-3" do |form|%>
+    <%= form.text_area :note %>
+    <%= form.submit "Submit", placeholder:'sdas', class:"btn btn-success w-100"%>
+  <% end %>
+</div>
