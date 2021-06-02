@@ -6,7 +6,7 @@
   </h2>
   <div id="id-<%=collection.id%>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
     <div class="accordion-body">
-      <p>Icon:<%= image_tag collection.image,class:"icon" if collection.image.attached?%></p>
+      <p><%= image_tag collection.image,class:"icon" if collection.image.attached?%></p>
       <p>Created at: <%= collection.created_at %></p>
       <%= link_to "View this group", collection ,class:"btn btn-success w-100 "%>
     </div>
