@@ -1,18 +1,12 @@
 <%= form_with model: @study_session, local: true do |form|%>
   <%= form.label :name ,class:"form-label"%>
-  <br>
   <%= form.text_field :name ,class:"form-control", required: true  %>
-  <br>
   <%= form.label :collection, class:"form-label"%>
-  <%= form.select :collection_id,class:"form-select", :selected => @selected %>
-  <br>
+  <%= form.select :collection_id,@collections, :selected => @selected,class:"form-select"%>
   <%= form.label :duration_start, class:"form-label"%>
   <%= time_field :study_session,:duration_start,class:"form-control",  required: true %>
-  <br>
   <%= form.label :duration_end ,class:"form-label"%>
-  <br>
   <%= time_field :study_session,:duration_end ,class:"form-control", required: true  %>
-  <br>
   <div class="bg-green">
     <%= form.submit "Submit new session", class:"btn btn-bottom" %>
   </div>
