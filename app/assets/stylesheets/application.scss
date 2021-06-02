@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: grey;
+}
+
 .navbar {
   color: var(--bs-blue);
   background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
@@ -93,6 +98,7 @@ input.nav-link {
 
 .user {
   color: grey;
+  font-size: 1.2em;
 
   .user-name {
     display: flex;
@@ -108,5 +114,10 @@ input.nav-link {
 
   .card {
     flex-direction: row;
+    padding: 0.5rem;
+  }
+
+  .column {
+    flex-direction: column;
   }
 }
