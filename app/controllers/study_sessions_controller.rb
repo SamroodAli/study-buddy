@@ -28,9 +28,11 @@ class StudySessionsController < ApplicationController
         duration: duration
       )
       @study_session.save
+      flash[:success] = "Session #{@study_session.name} created successfully"
       redirect_to @study_session
     else
-      redirect_to new_study_session_url
+      flash[:danger] = "'Duration end' should be greater than 'duration start'"
+      redirect_back(fallback_location: new_study_session_path)
     end
   end
 

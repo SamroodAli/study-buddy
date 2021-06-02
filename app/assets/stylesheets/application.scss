@@ -29,12 +29,6 @@
   }
 }
 
-.alert,
-.notice {
-  position: absolute;
-  color: white;
-}
-
 input.nav-link {
   background-color: rgba(0, 0, 0, 0);
   border: 0;
@@ -73,6 +67,26 @@ input.nav-link {
   margin: 1rem auto;
 }
 
-#study_session_note{
+#study_session_note {
   width: 100%;
+  height: 10em;
+}
+
+.bg-green {
+  background-color: #60b524;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0.3rem;
+  width: 100%;
+
+  .btn-bottom {
+    background-color: #60b524;
+    border-radius: 0;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid white;
+  }
 }

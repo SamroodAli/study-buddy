@@ -10,6 +10,6 @@ Collection: <%= @study_session.collection.name %>
 <br>
 Duration : <%= distance_of_time_in_words(@study_session.duration)%>
 <%= form_with model: @study_session, local: true,class:"form-control mt-3" do |form|%>
-  <%= form.text_field :note %>
-  <%= form.submit "Submit", placeholder:'sdas',class:"btn btn-success w-100 mt-1"%>
+  <%= form.text_area :note %>
+  <%= form.submit "Submit", placeholder:'sdas', class:"btn btn-success w-100"%>
 <% end %>
