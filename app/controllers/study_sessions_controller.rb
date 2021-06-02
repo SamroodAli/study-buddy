@@ -17,7 +17,9 @@ class StudySessionsController < ApplicationController
   end
 
   def create
-    if (duration = calc_duration(session_params))
+    duration_start = time(session_params[:duration_start])
+    duration_end = time(session_params[:duration_end])
+    if (duration = calc_duration(duration_start,duration_end))
       @study_session = current_user.study_sessions.build(session_params)
       @study_session.update(
         name: session_params[:name],
