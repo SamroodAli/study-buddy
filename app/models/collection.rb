@@ -1,4 +1,5 @@
 class Collection < ApplicationRecord
+  validates :name, presence: true
   scope :internal, -> { where(external: false) }
   scope :external, -> { where(external: true) }
   scope :my_external, -> { find_by(external: true) }
