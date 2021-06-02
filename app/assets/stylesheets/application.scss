@@ -121,3 +121,13 @@ input.nav-link {
     flex-direction: column;
   }
 }
+
+.form-control,
+.form-select {
+  padding: 0.9em;
+}
+
+.form-label {
+  font-size: 1.2em;
+  margin: 0.5rem;
+}
