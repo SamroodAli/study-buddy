@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   resources :collections, only: [:index,:new,:create,:show] do
     get :all , on: :collection
-    get :new_session, on: :member
+    get :new_session,:sessions, on: :member
   end
   resources :users
 end
