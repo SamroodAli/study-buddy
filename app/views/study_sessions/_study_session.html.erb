@@ -11,7 +11,7 @@
       <p>Total duration : <%= distance_of_time_in_words(study_session.duration) %></p>
       <p>Created at :<%= study_session.created_at %></p>
       <p><%= study_session.author.name if author%></p>
-      <%= link_to "View this session", study_session ,class:"btn"%>
+      <%= link_to "View this session", study_session ,class:"btn btn-success w-100  "%>
     </div>
   </div>
 </div>
