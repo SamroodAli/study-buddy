@@ -10,14 +10,11 @@ class StudySession < ApplicationRecord
   has_many :participants, through: :collaborations
   scope :total, -> { sum(:duration) }
 
-
   def internal?
     collection.external == false
   end
 
   def collection_name
-      internal? ? "Collection: " + collection.name : ""
+    internal? ? "Collection: #{collection.name}" : ''
   end
-
-
 end
