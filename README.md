@@ -79,3 +79,5 @@ $ git checkout <branch name>
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/samrood-ali/)
 
 
+## Contributions
+Design from [Gregoire Vella](https://www.behance.net/gregoirevella)
