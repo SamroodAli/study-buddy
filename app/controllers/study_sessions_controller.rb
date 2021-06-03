@@ -1,4 +1,5 @@
 class StudySessionsController < ApplicationController
+  before_action :login_required
   def index
     @study_sessions = if params[:recent] == 'false'
                         current_user.study_sessions.ancient.includes(:author, :collection)
