@@ -47,6 +47,7 @@ class StudySessionsController < ApplicationController
   def update
     @study_session = StudySession.find(params[:id])
     @study_session.update(session_params)
+    flash[:success] = "Note updated"
     redirect_to @study_session
   end
 
