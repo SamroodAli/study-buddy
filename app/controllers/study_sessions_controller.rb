@@ -1,9 +1,9 @@
 class StudySessionsController < ApplicationController
   def index
     if params[:recent] == "false"
-      @study_sessions = current_user.study_sessions.ancient.includes(:user,:collection)
+      @study_sessions = current_user.study_sessions.ancient.includes(:author,:collection)
     else
-      @study_sessions = current_user.study_sessions.recent.includes(:user,:collection)
+      @study_sessions = current_user.study_sessions.recent.includes(:author,:collection)
     end
     @total = @study_sessions.total
   end
@@ -16,9 +16,9 @@ class StudySessionsController < ApplicationController
 
   def external
     if params[:recent] == "false"
-      @study_sessions = current_user.collections.my_external.study_sessions.ancient.includes(:user,:collection)
+      @study_sessions = current_user.collections.my_external.study_sessions.ancient.includes(:author,:collection)
     else
-      @study_sessions = current_user.collections.my_external.study_sessions.recent.includes(:user,:collection)
+      @study_sessions = current_user.collections.my_external.study_sessions.recent.includes(:author,:collection)
     end
     @total = @study_sessions.total
     render :index

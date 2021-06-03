@@ -1,10 +1,10 @@
 class CollectionsController < ApplicationController
   def index
-    @collections = current_user.collections.internal
+    @collections = current_user.collections.internal.includes(:user,image_attachment: :blob)
   end
 
   def all
-    @collections = Collection.internal.all.includes(image_attachment: :blob)
+    @collections = Collection.internal.all.includes(:user,image_attachment: :blob)
     render :index
   end
 
