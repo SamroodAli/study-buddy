@@ -1,12 +1,14 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingOne">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#id-<%=study_session.id%>" aria-expanded="false" aria-controls="id-<%=study_session.id%>">
-      Name: <%= study_session.name %>
+      <p ><%= image(study_session)%></p>
+      <p>
+        <%= study_session.name %>
+      </p>
     </button>
   </h2>
   <div id="id-<%=study_session.id%>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
     <div class="accordion-body">
-      <p><%= image(study_session)%></p>
       <p><%= study_session.collection_name %></p>
       <p> <%= duration(study_session) %></p>
       <p>Created at :<%= study_session.created_at %></p>
