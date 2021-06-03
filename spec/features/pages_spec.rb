@@ -3,6 +3,7 @@ require './spec/support/helpers'
 
 feature 'Study Buddy home integration testing' do
   fixtures :users
+  fixtures :collections
   background do
     sam = User.new(name: 'samrood', email: 'user@example.com', password: 'password')
     sign_up_with(sam)
@@ -19,5 +20,11 @@ feature 'Study Buddy home integration testing' do
     expect(page).to have_link("All user's Collections")
     expect(page).to have_link("New Session")
     expect(page).to have_link("New Group")
+  end
+
+  scenario "collection's page" do
+    visit collection_path(collections(:Algorithm))
+    expect(page).to have_link("Sessions in this collection")
+    expect(page).to have_link("Create new session in this collection")
   end
 end
