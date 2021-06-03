@@ -34,5 +34,4 @@ RSpec.describe User do
       expect(invalid_user).not_to be_valid
     end
   end
-
 end
