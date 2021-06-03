@@ -3,7 +3,7 @@ An app to track your study sessions with the option to put them in collections f
 Each session has a short note for quick todos or notes. Have fun learning.
 
 ## Deployment
-- Heroku Link: [Click here](https://samrood-stay-in-touch.herokuapp.com/)
+- Heroku Link: [Click here](https://cool-study-buddy.herokuapp.com/)
 
 ![Screenshot of the app](./app-ss.png)
 ![Screenshot of the app](./app-ss-1.png)
