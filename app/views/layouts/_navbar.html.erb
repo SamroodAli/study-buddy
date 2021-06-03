@@ -4,7 +4,7 @@
     <a class="navbar-brand " href="#">STUDY BUDDY</a>
     <i class="fas fa-search"></i>
   </div>
-  <% if request.url.include?("sessions") %>
+  <% if sessions_page? %>
     <div class="justify-content-end navbar">
       <%=  link_to 'Most recent', url_for( :recent => :true ),class:"text-white btn"%>
       <%=  link_to 'Most ancient', url_for( :recent => :false ),class:"text-white btn"%>
