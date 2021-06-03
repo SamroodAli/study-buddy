@@ -19,4 +19,10 @@ RSpec.describe Collection do
       expect(collection).not_to be_valid
     end
   end
+
+  describe 'validity in fixtures' do
+    it 'should be vaid' do
+    expect(Collection.all.to_a.all?(&:valid?)).to be_truthy
+    end
+  end
 end

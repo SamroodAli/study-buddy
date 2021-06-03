@@ -34,4 +34,5 @@ feature 'Study Buddy home integration testing' do
     expect(page).to have_content("Most ancient")
     expect(page).to have_content("Most recent")
   end
+  
 end
