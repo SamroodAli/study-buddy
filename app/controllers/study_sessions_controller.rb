@@ -1,10 +1,10 @@
 class StudySessionsController < ApplicationController
   def index
-    if params[:recent] == "false"
-      @study_sessions = current_user.study_sessions.ancient.includes(:author,:collection)
-    else
-      @study_sessions = current_user.study_sessions.recent.includes(:author,:collection)
-    end
+    @study_sessions = if params[:recent] == 'false'
+                        current_user.study_sessions.ancient.includes(:author, :collection)
+                      else
+                        current_user.study_sessions.recent.includes(:author, :collection)
+                      end
     @total = @study_sessions.total
   end
 
@@ -15,11 +15,11 @@ class StudySessionsController < ApplicationController
   end
 
   def external
-    if params[:recent] == "false"
-      @study_sessions = current_user.collections.my_external.study_sessions.ancient.includes(:author,:collection)
-    else
-      @study_sessions = current_user.collections.my_external.study_sessions.recent.includes(:author,:collection)
-    end
+    @study_sessions = if params[:recent] == 'false'
+                        current_user.collections.my_external.study_sessions.ancient.includes(:author, :collection)
+                      else
+                        current_user.collections.my_external.study_sessions.recent.includes(:author, :collection)
+                      end
     @total = @study_sessions.total
     render :index
   end
@@ -47,7 +47,7 @@ class StudySessionsController < ApplicationController
   def update
     @study_session = StudySession.find(params[:id])
     @study_session.update(session_params)
-    flash[:success] = "Note updated"
+    flash[:success] = 'Note updated'
     redirect_to @study_session
   end
 

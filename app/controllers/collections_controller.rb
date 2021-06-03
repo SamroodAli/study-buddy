@@ -1,10 +1,10 @@
 class CollectionsController < ApplicationController
   def index
-    @collections = current_user.collections.internal.includes(:user,image_attachment: :blob)
+    @collections = current_user.collections.internal.includes(:user, image_attachment: :blob)
   end
 
   def all
-    @collections = Collection.internal.all.includes(:user,image_attachment: :blob)
+    @collections = Collection.internal.all.includes(:user, image_attachment: :blob)
     render :index
   end
 
@@ -18,11 +18,11 @@ class CollectionsController < ApplicationController
 
   def sessions
     @collection = Collection.find(params[:id])
-    if params[:recent] == "false"
-      @study_sessions = @collection.study_sessions.ancient.includes(:author,:collection)
-    else
-      @study_sessions = @collection.study_sessions.recent.includes(:author,:collection)
-    end
+    @study_sessions = if params[:recent] == 'false'
+                        @collection.study_sessions.ancient.includes(:author, :collection)
+                      else
+                        @collection.study_sessions.recent.includes(:author, :collection)
+                      end
     @total = @study_sessions.total
     render 'study_sessions/index'
   end

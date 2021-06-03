@@ -63,5 +63,4 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     redirect_to login_url unless correct_user?(@user)
   end
-  
 end
