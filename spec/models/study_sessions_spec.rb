@@ -19,4 +19,13 @@ RSpec.describe Collection do
       expect(study_session).not_to be_valid
     end
   end
+
+  describe :invalid_name do
+    it 'should have valid name' do
+      study_session = StudySession.new(name: 'Algorithm')
+      study_session.valid?
+      expect(study_session.errors.full_messages).to include("Author must exist")
+      expect(study_session).not_to be_valid
+    end
+  end
 end
