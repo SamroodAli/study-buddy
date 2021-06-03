@@ -1,4 +1,5 @@
 class CollectionsController < ApplicationController
+  before_action :login_required
   def index
     @collections = current_user.collections.internal.includes(:user, image_attachment: :blob)
   end
