@@ -4,7 +4,7 @@ class CollectionsController < ApplicationController
   end
 
   def all
-    @collections = Collection.internal.all
+    @collections = Collection.internal.all.includes(image_attachment: :blob)
     render :index
   end
 
