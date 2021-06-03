@@ -13,6 +13,11 @@ feature 'Study Buddy home integration testing' do
   end
 
   scenario 'home page has navigational links' do
-    (page).to_not have_link("All My study sessions")
+    expect(page).to have_link("All My study sessions")
+    expect(page).to have_link("All External study sessions")
+    expect(page).to have_link("All My Collections")
+    expect(page).to have_link("All user's Collections")
+    expect(page).to have_link("New Session")
+    expect(page).to have_link("New Group")
   end
 end
