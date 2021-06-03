@@ -19,9 +19,9 @@ class CollectionsController < ApplicationController
   def sessions
     @collection = Collection.find(params[:id])
     if params[:recent] == "false"
-      @study_sessions = @collection.study_sessions.ancient.includes(:author)
+      @study_sessions = @collection.study_sessions.ancient.includes(:author,:collection)
     else
-      @study_sessions = @collection.study_sessions.recent.includes(:author)
+      @study_sessions = @collection.study_sessions.recent.includes(:author,:collection)
     end
     @total = @study_sessions.total
     render 'study_sessions/index'
