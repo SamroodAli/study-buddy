@@ -1,13 +1,15 @@
-<h1>Log in</h1>
-<%= form_with url: login_path, scope: :session,local: true do |form|%>
-  <%= form.label :email %>
-  <%= form.email_field :email ,class:"form-control"%>
-  <%= form.label :password %>
-  <%= form.password_field :password ,class:"form-control"%>
-  <%= form.submit "Log in", class:"btn btn-bottom" %>
-  <%= form.label :remember_me, class: "checkbox inline" do %>
-    <%= form.check_box :remember_me %>
-    <span>Remember me on this computer</span>
+<div class="container">
+  <h1>Log in</h1>
+  <%= form_with url: login_path, scope: :session,local: true do |form|%>
+    <%= form.label :email %>
+    <%= form.email_field :email ,class:"form-control"%>
+    <%= form.label :password %>
+    <%= form.password_field :password ,class:"form-control"%>
+    <%= form.submit "Log in", class:"btn btn-bottom" %>
+    <%= form.label :remember_me, class: "checkbox inline" do %>
+      <%= form.check_box :remember_me %>
+      <span>Remember me on this computer</span>
+    <% end %>
   <% end %>
-<% end %>
-<p>New User ? <%= link_to 'Sign up', signup_path %></p>
+  <p>New User ? <%= link_to 'Sign up', signup_path ,class:"btn btn-bottom"%></p>
+</div>
