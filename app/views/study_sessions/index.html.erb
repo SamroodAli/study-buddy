@@ -1,6 +1,7 @@
+    
+<p class="card p-3">Total duration : <%= distance_of_time_in_words(@total) %></p>
 <div class="scroll">
   <% if @study_sessions.any? %>
-    <p class="card p-3">Total duration : <%= distance_of_time_in_words(@total) %></p>
     <div class="accordion" id="accordionExample">
       <%= render @study_sessions ,author: false%>
     </div>
