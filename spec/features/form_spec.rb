@@ -1,10 +1,14 @@
 require 'rails_helper'
+require './spec/support/helpers'
 
-RSpec.feature "Forms", type: :feature do
-  it 'can enter a name and receive a greeting' do
-    visit 'study_sessions/new'    
-    fill_in :name, with: "Learning dynamic programming"
-    click_on 'submit'
-    expect(page).to have_content "Welcome, Capybara!"
+feature 'Study Buddy integration testing' do
+  fixtures :users
+  background do
+    sam = User.new(name: 'samrood', email: 'user@example.com', password: 'password')
+    sign_up_with(sam)
+  end
+
+  scenario 'home page has blue background' do
+    expect(page).to have_selector('.nav-blue')
   end
 end
