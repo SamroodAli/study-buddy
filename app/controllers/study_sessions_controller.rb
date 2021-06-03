@@ -25,6 +25,7 @@ class StudySessionsController < ApplicationController
   end
 
   def create
+    session_params[:collection_id]="1" if session_params[:collection_id].nil?
     duration_start = time(session_params[:duration_start])
     duration_end = time(session_params[:duration_end])
     if (duration = calc_duration(duration_start, duration_end))
