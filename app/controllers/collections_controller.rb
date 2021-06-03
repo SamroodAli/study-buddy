@@ -18,7 +18,11 @@ class CollectionsController < ApplicationController
 
   def sessions
     @collection = Collection.find(params[:id])
-    @study_sessions = @collection.study_sessions
+    if params[:recent = "true"
+      @study_sessions = @collection.study_sessions.recent
+    else
+      @study_sessions = @collection.study_sessions.ancient
+    end
     @total = @study_sessions.total
     render 'study_sessions/index'
   end

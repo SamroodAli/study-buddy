@@ -15,7 +15,11 @@ class StudySessionsController < ApplicationController
   end
 
   def external
-    @study_sessions = current_user.collections.my_external.study_sessions
+    if params[:recent] == "true"
+      @study_sessions = current_user.collections.my_external.study_sessions.recent
+    else
+      @study_sessions = current_user.collections.my_external.study_sessions.ancient
+    end
     @total = @study_sessions.total
     render :index
   end
