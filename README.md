@@ -5,7 +5,8 @@ Each session has a short note for quick todos or notes. Have fun learning.
 ## Deployment
 - Heroku Link: [Click here](https://samrood-stay-in-touch.herokuapp.com/)
 
-![Screenshot of the app](./app-ss-home-page.png)
+![Screenshot of the app](./app-ss.png)
+![Screenshot of the app](./app-ss-1.png)
 ## Getting started
 
 To get started with the app, first clone the repo and `cd` into the directory:
