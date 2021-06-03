@@ -1,9 +1,9 @@
 <div class="user">
   <div class="user-name container card">
+    <h1 class="text-dark text-center"><%= @study_session.name %></h1>
     <%= link_to @study_session.collection do%>
       <p><%= image(@study_session) %></p>
     <% end %>
-    <p><%= @study_session.name %></p>
   </div>
   <div class="card column">
     <p>Created: <%= @study_session.created_at %></p>

@@ -1,3 +1,7 @@
+body {
+  max-height: 100vh;
+}
+
 a {
   text-decoration: none;
   color: grey;
@@ -84,7 +88,9 @@ input.nav-link {
   background-color: #60b524;
   padding: 1rem;
   position: absolute;
-  bottom: 0.3rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
 
   .btn-bottom {
@@ -137,4 +143,10 @@ input.nav-link {
 
 .session-icon {
   margin-right: 1rem;
+}
+
+.scroll {
+  height: 60vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
