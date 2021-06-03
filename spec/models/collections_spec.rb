@@ -22,7 +22,7 @@ RSpec.describe Collection do
 
   describe 'validity in fixtures' do
     it 'should be vaid' do
-    expect(Collection.all.to_a.all?(&:valid?)).to be_truthy
+      expect(Collection.all.to_a.all?(&:valid?)).to be_truthy
     end
   end
 end

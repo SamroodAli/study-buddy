@@ -8,11 +8,11 @@ module StudySessionsHelper
   end
 
   def collections_page?
-    request.url.include?("collections")
+    request.url.include?('collections')
   end
 
   def sessions_page?
     url = request.url
-    url.include?("sessions") && !url.include?("no_sort")
+    url.include?('sessions') && !url.include?('no_sort')
   end
 end
