@@ -37,8 +37,11 @@
           <% end %>
         </li>
         <li class="nav-item">
-          <%= button_to 'Log out', logout_path, :method => :delete, data: {:confirm => "You sure you want to log out?" } ,
-                            :title => "log out",class:"nav-link"%>
+          <%= button_to logout_path, :method => :delete, data: {:confirm => "You sure you want to log out?" } ,
+                            :title => "log out",class:"btn nav-link" do%>
+            <i class="far fa-user-circle"></i>
+            <span>Log out</span>
+          <% end %>
         </li>
       <% else %>
         <li class="nav-item">
