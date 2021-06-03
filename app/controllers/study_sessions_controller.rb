@@ -1,6 +1,10 @@
 class StudySessionsController < ApplicationController
   def index
-    @study_sessions = current_user.study_sessions
+    if params[:recent] == "true"
+      @study_sessions = current_user.study_sessions.recent
+    else
+      @study_sessions = current_user.study_sessions.ancient
+    end
     @total = @study_sessions.total
   end
 

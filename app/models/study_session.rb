@@ -1,5 +1,6 @@
 class StudySession < ApplicationRecord
-  default_scope -> { order(created_at: :desc) }
+  scope :recent, -> { order(created_at: :desc) }
+  scope :ancient, -> { order(created_at: :asc) }
   validates :name, presence: true
   validates :duration, presence: true
   validates :duration_start, presence: true
