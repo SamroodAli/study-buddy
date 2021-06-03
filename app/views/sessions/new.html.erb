@@ -1,15 +1,20 @@
-<div class="container">
-  <h1>Log in</h1>
-  <%= form_with url: login_path, scope: :session,local: true do |form|%>
-    <%= form.label :email %>
-    <%= form.email_field :email ,class:"form-control"%>
-    <%= form.label :password %>
+<h1 class="text-center m-3">Log in</h1>
+<%= form_with url: login_path, scope: :session,local: true do |form|%>
+  <div class="container">
+    <%= form.label :email , class:"invisible"%>
+    <%= form.email_field :email ,class:"form-control",placeholder:"Enter email"%>
+    <%= form.label :password ,class:"invisible"%>
     <%= form.password_field :password ,class:"form-control"%>
+  </div>
+  <div class="bg-green">
     <%= form.submit "Log in", class:"btn btn-bottom" %>
+  </div>
+  <div class="m-3">
     <%= form.label :remember_me, class: "checkbox inline" do %>
-      <%= form.check_box :remember_me %>
+      <%= form.check_box :remember_me,class:"m-3" %>
       <span>Remember me on this computer</span>
     <% end %>
-  <% end %>
-  <p>New User ? <%= link_to 'Sign up', signup_path ,class:"btn btn-bottom"%></p>
+  </div>
+<% end %>
+<p class="mx-3">New User ?<%= link_to 'Sign up', signup_path ,class:"btn nav-blue text-white mx-3"%></p>
 </div>
