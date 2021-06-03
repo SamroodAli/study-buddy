@@ -3,9 +3,13 @@ a {
   color: grey;
 }
 
+.nav-blue{
+    background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
+
+}
+
 .navbar {
   color: var(--bs-blue);
-  background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
   flex-wrap: nowrap;
   padding: 1rem 1rem;
 
