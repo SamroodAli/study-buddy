@@ -1,0 +1,7 @@
+Algorithm:
+  name: Learning binary search
+  duration_start: <%= DateTime.parse("01:00") %>
+  duration_end: <%= DateTime.parse("03:00") %>
+  duration: 7200
+  collection: Algorithm
+  author: Samrood

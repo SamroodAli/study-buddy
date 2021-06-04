@@ -1,0 +1,6 @@
+<div class="blue-section">
+  <%= image_tag @collection.image,class:"icon collection-icon gravatar" if @collection.image.attached?%>
+  <h1 class="text-light text-center"><%= @collection.name  %></h1>
+  <%= link_to 'Sessions in this collection', sessions_collection_path(@collection) %>
+  <%= link_to 'Create new session in this collection', new_session_collection_path(@collection) %>
+</div>

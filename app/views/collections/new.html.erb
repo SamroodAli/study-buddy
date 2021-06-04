@@ -1,0 +1,21 @@
+<%= form_with model: @collection, local: true do |form|%>
+  <br>
+  <%= form.text_field :name ,required: true,class:"form-control",placeholder:"Enter collection name"%>
+  <br>
+  <%= form.label :image ,"Choose logo [ Optional ]",class:"form-label"%>
+  <%=  form.file_field :image, accept: "image/jpeg, image/gif, image/png",class:"form-control"%>
+  <br>
+  <br>
+  <div class="bg-green">
+    <%= form.submit "Create new collection" ,class:"btn btn-bottom"%>
+  </div>
+<% end %>
+<script type="text/javascript">
+  document.querySelector('#collection_image').addEventListener('change',function fileSizeChecker(){
+    const size_in_megabytes = this.files[0].size/1024/1024;
+      if (size_in_megabytes > 5) {
+            alert("Maximum file size is 5MB. Please choose a smaller file.");
+            this.value = ''
+      }
+  })
+</script>

@@ -1,3 +1,18 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root 'users#show'
+  
+  get     '/signup',    to: 'users#new'
+  get     '/login',     to:'sessions#new'
+  post    '/login',     to:'sessions#create'
+  delete  '/logout',    to:'sessions#destroy'
+  
+  resources :study_sessions, only:[:index,:new,:create,:show,:update] do
+    get :external, on: :collection
+  end
+  resources :collections, only: [:index,:new,:create,:show] do
+    get :all , on: :collection
+    get :new_session,:sessions, on: :member
+  end
+  resources :users
 end

@@ -1,0 +1,16 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#id-<%=collection.id%>" aria-expanded="false" aria-controls="id-<%=collection.id%>">
+      <p><%= image_collection(collection) %>
+        <p><%= collection.name %></p>
+      </button>
+    </h2>
+    <div id="id-<%=collection.id%>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      </p>
+      <p>Created at: <%= collection.created_at %></p>
+      <p>Created by: <%= collection.user.name %></p>
+      <%= link_to "View this group", collection ,class:"btn btn-success w-100 "%>
+    </div>
+  </div>
+</div>

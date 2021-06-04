@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StudyBuddy</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Study Buddy</title>
+    <%= render 'layouts/meta' %>
   </head>
-
-  <body>
-    <%= yield %>
+  <body id="page-top">
+    <div id="wrapper">
+      <%= render 'layouts/sidebar' %>
+      <div class="d-flex flex-column" id="content-wrapper">
+        <%= render 'layouts/notice' %>
+        <%= render 'layouts/navbar' %>
+        <%= yield %>
+      </div>
+    </div>
+    <%= javascript_pack_tag 'theme', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

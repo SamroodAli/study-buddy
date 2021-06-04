@@ -1,0 +1,20 @@
+<div class="user">
+  <div class="user-name container card">
+    <h1 class="text-dark text-center"><%= @study_session.name %></h1>
+    <%= link_to @study_session.collection do%>
+      <p><%= image(@study_session) %></p>
+    <% end %>
+  </div>
+  <div class="card column">
+    <p>Created: <%= @study_session.created_at %></p>
+    <p>Collection: <%= @study_session.collection.name %></p>
+  </div>
+  <div class="card justify-content-between">
+    <p>Duration : </p>
+    <p><%= distance_of_time_in_words(@study_session.duration)%></p>
+  </div>
+  <%= form_with model: @study_session, local: true,class:"form-control mt-3" do |form|%>
+    <%= form.text_area :note %>
+    <%= form.submit "Submit", placeholder:'sdas', class:"btn btn-success w-100"%>
+  <% end %>
+</div>

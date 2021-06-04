@@ -1,0 +1,15 @@
+  <%= form_with model: @user, local: true do |form|%>
+  <div class="container">
+    <%= form.label :name,class:"invisible" %>
+    <%= form.text_field :name, class:"form-control",placeholder:"Enter name" %>
+    <%= form.label :email,class:"invisible" %>
+    <%= form.email_field :email ,class:"form-control",placeholder:"Enter email"%>
+    <%= form.label :password,class:"invisible" %>
+    <%= form.password_field :password ,class:"form-control",placeholder:"Enter password"%>
+    <%= form.label :password_confirmation,"Confirmation",class:"invisible" %>
+    <%= form.password_field :password_confirmation ,class:"form-control",placeholder:"Confirm password"%>
+  </div>
+  <div class="bg-green">
+    <%= form.submit user_button(@user), class:"btn btn-bottom" %>
+  </div>
+<% end %>

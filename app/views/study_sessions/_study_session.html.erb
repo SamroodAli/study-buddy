@@ -1,0 +1,19 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#id-<%=study_session.id%>" aria-expanded="false" aria-controls="id-<%=study_session.id%>">
+      <p ><%= image(study_session)%></p>
+      <p>
+        <%= study_session.name %>
+      </p>
+    </button>
+  </h2>
+  <div id="id-<%=study_session.id%>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <p><%= study_session.collection_name %></p>
+      <p> <%= duration(study_session) %></p>
+      <p>Created at :<%= study_session.created_at %></p>
+      <p><%= "Created by: " + study_session.author.name if collections_page?%></p>
+      <%= link_to "View this session", study_session_path(study_session,no_sort: true) ,class:"btn btn-success w-100  "%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,157 @@
+body {
+  max-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.nav-blue {
+  background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
+}
+
+.navbar {
+  color: var(--bs-blue);
+  flex-wrap: nowrap;
+  padding: 1rem 1rem;
+
+  .navbar-brand {
+    color: white;
+    font-size: 1rem;
+  }
+
+  button {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .btn:focus,
+  .btn-check:focus + .btn {
+    outline: 0;
+    box-shadow: 0 0 0 0;
+  }
+
+  i {
+    margin-right: 1rem;
+    color: white;
+  }
+}
+
+input.nav-link {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+}
+
+.icon {
+  height: 4em;
+  width: 4em;
+}
+
+.blue-section {
+  background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin: 1rem;
+    display: block;
+    padding-bottom: 0.3rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin: 1rem auto;
+}
+
+#study_session_note {
+  width: 100%;
+  height: 30vh;
+}
+
+.bg-green {
+  background-color: #60b524;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  .btn-bottom {
+    background-color: #60b524;
+    border-radius: 0;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid white;
+  }
+}
+
+.user {
+  color: grey;
+  font-size: 1.2em;
+
+  .user-name {
+    display: flex;
+
+    * {
+      margin: 0 0.5rem;
+    }
+  }
+
+  .user-icon {
+    float: left;
+  }
+
+  .card {
+    flex-direction: row;
+    padding: 0.5rem;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+}
+
+.form-control,
+.form-select {
+  padding: 0.9em;
+}
+
+.form-label {
+  font-size: 1.2em;
+  margin: 0.5rem;
+}
+
+.session-icon {
+  margin-right: 1rem;
+}
+
+.scroll {
+  height: 50vh;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  &.collection {
+    height: 75vh;
+  }
+}
