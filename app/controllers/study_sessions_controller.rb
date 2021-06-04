@@ -1,4 +1,5 @@
 class StudySessionsController < ApplicationController
+  before_action :login_required
   def index
     @study_sessions = if params[:recent] == 'false'
                         current_user.study_sessions.ancient.includes(:author, :collection)
@@ -36,9 +37,10 @@ class StudySessionsController < ApplicationController
         duration_end: duration_end,
         duration: duration
       )
-      @study_session.save
-      flash[:success] = "Session #{@study_session.name} created successfully"
-      redirect_to @study_session
+      if @study_session.valid? & @study_session.save
+        flash[:success] = "Session #{@study_session.name} created successfully"
+        redirect_to study_session_path(@study_session, no_sort: true)
+      end
     else
       flash[:danger] = "'Duration end' should be greater than 'duration start'"
       redirect_back(fallback_location: new_study_session_path)
