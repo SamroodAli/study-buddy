@@ -39,13 +39,13 @@ feature 'Study Buddy new session and new collection' do
     click_button 'Create new session'
     expect(StudySession.count).not_to eq(count_before + 1)
   end
-  
-  scenario 'Creating an session with no duration start' do
+
+  scenario 'Creating an session with no duration end' do
     count_before = StudySession.count
     visit new_study_session_path
     fill_in 'Enter session name', with: 'Learning rails'
-    fill_in 'Duration start', with: ''
-    fill_in 'Duration end', with: '03:00'
+    fill_in 'Duration start', with: '03:00'
+    fill_in 'Duration end', with: ''
     click_button 'Create new session'
     expect(StudySession.count).not_to eq(count_before + 1)
   end
