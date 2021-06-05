@@ -1,2 +1,6 @@
 <%= form_with model: @note, local: true do |form|%>
+  <%= form.label :title,class:"invisible" %>
+  <%= form.text_field :title %>
+  <%= form.label :content %>
+  <%= form.text_field :content %>
 <% end %>
