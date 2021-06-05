@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'notes/show'
+  get 'notes/index'
+  get 'notes/new'
   root 'users#show'
   
   get     '/signup',    to: 'users#new'
