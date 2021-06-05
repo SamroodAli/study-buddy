@@ -4,6 +4,10 @@
   right: 50px;
   z-index: 999;
   cursor: pointer;
+  
+  &.new_page{
+    bottom: 100px;
+  }
 }
 
 .fab-icon-holder {
