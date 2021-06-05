@@ -1,7 +1,9 @@
 <%= form_with model: @note, local: true do |form|%>
-  <%= form.label :title,class:"invisible" %>
-  <%= form.text_field :title %>
-  <%= form.label :content %>
-  <%= form.text_field :content %>
-  <%= form.submit "Submit", class:"" %>
+  <%= form.label :title,class:"invisible form-label" %>
+  <%= form.text_field :title ,class:"form-control",placeholder:"Enter title"%>
+  <%= form.label :content,class:"form-label" %>
+  <%= form.text_field :content ,class:"form-control",placeholder:"Note down here!"%>
+  <div class="bg-green">
+    <%= form.submit "Submit", class:"btn btn-bottom" %>
+  </div>
 <% end %>
