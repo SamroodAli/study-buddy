@@ -1,0 +1,31 @@
+<div class="fab-container">
+  <div class="fab fab-icon-holder">
+    <i class="fas fa-plus"></i>
+  </div>
+  <ul class="fab-options">
+    <li>
+      <span class="fab-label">New note</span>
+      <div class="fab-icon-holder">
+        <%= link_to new_note_path do %>
+          <i class="fas fa-pencil-square"></i>
+        <% end %>
+      </div>
+    </li>
+    <li>
+      <span class="fab-label">New session</span>
+      <div class="fab-icon-holder">
+        <%= link_to new_study_session_path  do %>
+          <i class="fas fa-table"></i>
+        <% end %>
+      </div>
+    </li>
+    <li>
+      <span class="fab-label">New Collection</span>
+      <div class="fab-icon-holder">
+        <%= link_to new_collection_path do %>
+          <i class="fas fa-th-large"></i>
+        <% end %>
+      </div>
+    </li>
+  </ul>
+</div>

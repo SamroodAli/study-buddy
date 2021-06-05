@@ -2,20 +2,6 @@
   <div class="navbar">
     <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
     <a class="navbar-brand " href="#">STUDY BUDDY</a>
-    <div class="d-flex no-wrap">
-      <%= link_to new_note_path ,class:"mx-md-3" do%>
-        <i class="fas fa-pencil-square"></i>
-        <span class="text-white  d-none d-md-inline">New Note</span>
-      <% end %>
-      <%= link_to new_study_session_path ,class:"mx-md-3"  do%>
-        <i class="fas fa-table"></i>
-        <span class="text-white  d-none d-md-inline">New Session</span>
-      <% end %>
-      <%= link_to new_collection_path ,class:"mx-md-3" do%>
-        <i class="fas fa-th-large"></i>
-        <span class="text-white  d-none d-md-inline">New Collection</span>
-      <% end %>
-    </div>
   </div>
   <% if sessions_page? %>
     <div class="justify-content-end navbar">
