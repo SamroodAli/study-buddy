@@ -10,6 +10,4 @@ module StudySessionsHelper
   def collections_page?
     request.url.include?('collections')
   end
-
-  
 end

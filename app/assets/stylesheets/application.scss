@@ -7,16 +7,14 @@ body {
 
 a {
   text-decoration: none;
-  background-color: #2f5d62;
-  color: white;
-  &:hover{
-    color: white ;
+  color: #2f5d62;  
+  &:hover {
+    color: black;
   }
 }
 
-
 .color {
-  color:#2f5d62;
+  color: #2f5d62;
 }
 
 .nav-blue {

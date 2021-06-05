@@ -2,8 +2,8 @@
   <div class="card p-3 d-flex flex-row flex-wrap justify-content-between">
     <p class="inline">Total: <%= distance_of_time_in_words(@total) %></p>
     <div class="justify-content-end d-flex bg-light sort">
-      <%=  link_to 'Most recent', url_for( :recent => :true ),class:" mx-1  mx-md-1"%>
-      <%=  link_to 'Most ancient', url_for( :recent => :false ),class:"mx-1  mx-md-1"%>
+      <%=  link_to 'Most recent', url_for( :recent => :true ),class:" mx-1 "%>
+      <%=  link_to 'Most ancient', url_for( :recent => :false ),class:"mx-1"%>
     </div>
   </div>
   <div class="scroll">
@@ -11,13 +11,3 @@
       <%= render @study_sessions ,author: false%>
     </div>
   <% end %>
-  <% if collections_page? %>
-    <div class="bg-green">
-      <%= link_to "Create new session in #{@collection.name}", new_session_collection_path(@collection) ,  class:"btn btn-bottom"%>
-    </div>
-  <% else %>
-    <div class="bg-green">
-      <%= link_to 'Create new session', new_study_session_path ,class:"btn btn-bottom"%>
-    </div>
-  </div>
-<% end %>

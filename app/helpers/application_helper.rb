@@ -21,10 +21,10 @@ module ApplicationHelper
   end
 
   def new_page?
-    ['new','collections'].any?{|string| request.url.include?(string)}
+     request.url.include?('new') || request.url.include?('edit')
   end
 
   def fab_class
-    new_page? ? "new-page" : ""
+    new_page? ? 'new-page' : ''
   end
 end

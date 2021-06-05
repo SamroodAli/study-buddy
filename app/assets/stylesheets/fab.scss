@@ -53,8 +53,8 @@
   transform-origin: 85% bottom;
 }
 
-.fab:hover + .fab-options,
-.fab-options:hover {
+.fab-options:hover,
+.fab:hover + .fab-options {
   opacity: 1;
   transform: scale(1);
 }
