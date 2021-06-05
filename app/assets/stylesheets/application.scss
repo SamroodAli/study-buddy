@@ -4,11 +4,10 @@ body {
 
 a {
   text-decoration: none;
-  color: grey;
 }
 
 .nav-blue {
-  background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
+  background: linear-gradient(#2f5d62 45%, #2f5d62 92%);
 }
 
 .navbar {
@@ -52,7 +51,7 @@ input.nav-link {
 }
 
 .blue-section {
-  background: linear-gradient(#1c4c7f 45%, #2770a7 92%);
+  background-color: #a7c4bc;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -86,7 +85,7 @@ input.nav-link {
 }
 
 .bg-green {
-  background-color: #60b524;
+  background-color: #5e8b7e;
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -95,7 +94,6 @@ input.nav-link {
   width: 100%;
 
   .btn-bottom {
-    background-color: #60b524;
     border-radius: 0;
     color: white;
     font-size: 1rem;
@@ -167,5 +165,11 @@ form {
 
   textarea {
     height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .intro-text {
+    width: 45%;
   }
 }

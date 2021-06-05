@@ -1,9 +1,4 @@
 <div class="blue-section">
   <%= gravatar_for @user %>
-  <h1 class="text-white text-center"><%= current_user.name %></h1>
-  <%= link_to 'All My notes', notes_path %>
-  <%= link_to 'All My study sessions', study_sessions_path  %>
-  <%= link_to 'All uncollected study sessions', external_study_sessions_path  %>
-  <%= link_to 'All My Collections',collections_path %>
-  <%= link_to "All user's Collections", all_collections_path  %>
+  <h1><%= @user.name %></h1>
 </div>
