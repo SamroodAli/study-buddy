@@ -2,10 +2,8 @@
   <div class="card p-3 d-flex flex-row flex-wrap justify-content-between">
     <p class="inline">Total: <%= distance_of_time_in_words(@total) %></p>
     <div class="justify-content-end d-flex bg-light sort">
-      <% if sessions_page? %>
-        <%=  link_to 'Most recent', url_for( :recent => :true ),class:"text-white btn btn-success"%>
-        <%=  link_to 'Most ancient', url_for( :recent => :false ),class:"text-white btn btn-success"%>
-      <% end %>
+      <%=  link_to 'Most recent', url_for( :recent => :true ),class:" mx-1  mx-md-1"%>
+      <%=  link_to 'Most ancient', url_for( :recent => :false ),class:"mx-1  mx-md-1"%>
     </div>
   </div>
   <div class="scroll">

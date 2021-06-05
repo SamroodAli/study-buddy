@@ -11,8 +11,5 @@ module StudySessionsHelper
     request.url.include?('collections')
   end
 
-  def sessions_page?
-    url = request.url
-    url.include?('sessions') && url.include?('sort')
-  end
+  
 end

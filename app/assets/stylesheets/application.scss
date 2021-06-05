@@ -2,10 +2,21 @@
 
 body {
   max-height: 100vh;
+  color: #2f5d62;
 }
 
 a {
   text-decoration: none;
+  background-color: #2f5d62;
+  color: white;
+  &:hover{
+    color: white ;
+  }
+}
+
+
+.color {
+  color:#2f5d62;
 }
 
 .nav-blue {
@@ -20,7 +31,6 @@ a {
 
   .navbar-brand {
     color: white;
-    font-size: 1rem;
   }
 
   button {

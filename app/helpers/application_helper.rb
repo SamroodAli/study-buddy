@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def new_page?
-    ['new','sort=true','collections'].any?{|string| request.url.include?(string)}
+    ['new','collections'].any?{|string| request.url.include?(string)}
   end
 
   def fab_class

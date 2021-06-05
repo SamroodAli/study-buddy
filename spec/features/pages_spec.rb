@@ -30,7 +30,7 @@ feature 'Study Buddy home integration testing' do
   end
 
   scenario 'Study Sessions page' do
-    visit study_sessions_path(sort:true)
+    visit study_sessions_path
     expect(page).to have_content('Most ancient')
     expect(page).to have_content('Most recent')
   end

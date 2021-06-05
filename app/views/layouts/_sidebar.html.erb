@@ -2,7 +2,7 @@
   <div class="container-fluid d-flex flex-column p-0">
     <%= link_to root_path,class:"navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" do%>
       <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-book-reader"></i></div>
-      <div class="sidebar-brand-text mx-3"><span>Study Buddy</span></div>
+      <div class="sidebar-brand-text mx-3"></div>
     <% end %>
     <hr class="sidebar-divider my-0">
     <ul class="navbar-nav text-light" id="accordionSidebar">
@@ -19,7 +19,7 @@
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to study_sessions_path(sort:true) ,class:"nav-link" do%>
+            <%= link_to study_sessions_path ,class:"nav-link" do%>
               <i class="fas fa-table"></i>
               <span>Sessions</span>
             <% end %>
