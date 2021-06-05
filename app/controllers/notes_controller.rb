@@ -8,5 +8,6 @@ class NotesController < ApplicationController
   end
 
   def new
+    current_user.notes.build
   end
 end

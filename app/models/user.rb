@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :collaborative_sessions, through: :collaborations, source: :study_session
   has_many :memberships, foreign_key: :member_id
   has_many :participating_collections, through: :memberships
+  has_many :notes
 
   attr_accessor :remember_token
 
