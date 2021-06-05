@@ -25,6 +25,7 @@ gem 'dotiw'
 gem 'image_processing', '1.9.3'
 gem 'mini_magick', '4.9.5'
 
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
