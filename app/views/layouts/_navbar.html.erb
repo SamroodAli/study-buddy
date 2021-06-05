@@ -3,10 +3,4 @@
     <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
     <a class="navbar-brand " href="#">STUDY BUDDY</a>
   </div>
-  <% if sessions_page? %>
-    <div class="justify-content-end navbar">
-      <%=  link_to 'Most recent', url_for( :recent => :true ),class:"text-white btn"%>
-      <%=  link_to 'Most ancient', url_for( :recent => :false ),class:"text-white btn"%>
-    </div>
-  <% end %>
 </nav>

@@ -58,20 +58,6 @@ input.nav-link {
   height: 100vh;
   display: flex;
   flex-direction: column;
-
-  a {
-    margin: 1rem;
-    display: block;
-    padding-bottom: 0.3rem;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid white;
-    width: 100%;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 .gravatar {
@@ -105,8 +91,9 @@ input.nav-link {
     text-transform: uppercase;
     border: 1px solid white;
   }
-  &:hover{
-    background-color:#2f5d62;
+
+  &:hover {
+    background-color: #2f5d62;
   }
 }
 

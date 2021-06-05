@@ -1,12 +1,16 @@
 .fab-container {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 3em;
   z-index: 999;
   cursor: pointer;
-  
-  &.new_page{
+  right: 1em;
+
+  &.new-page {
     bottom: 100px;
+  }
+
+  @media (min-width: 540px) {
+    right: 2.5em;
   }
 }
 
@@ -28,7 +32,7 @@
   justify-content: center;
   height: 100%;
   font-size: 25px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .fab {
@@ -49,7 +53,7 @@
   transform-origin: 85% bottom;
 }
 
-.fab:hover+.fab-options,
+.fab:hover + .fab-options,
 .fab-options:hover {
   opacity: 1;
   transform: scale(1);

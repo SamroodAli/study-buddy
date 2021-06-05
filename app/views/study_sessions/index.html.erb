@@ -1,7 +1,14 @@
-    
-<p class="card p-3">Total duration : <%= distance_of_time_in_words(@total) %></p>
-<div class="scroll">
-  <% if @study_sessions.any? %>
+<% if @study_sessions.any? %>
+  <div class="card p-3 d-flex flex-row flex-wrap justify-content-between">
+    <p class="inline">Total: <%= distance_of_time_in_words(@total) %></p>
+    <div class="justify-content-end d-flex bg-light sort">
+      <% if sessions_page? %>
+        <%=  link_to 'Most recent', url_for( :recent => :true ),class:"text-white btn btn-success"%>
+        <%=  link_to 'Most ancient', url_for( :recent => :false ),class:"text-white btn btn-success"%>
+      <% end %>
+    </div>
+  </div>
+  <div class="scroll">
     <div class="accordion" id="accordionExample">
       <%= render @study_sessions ,author: false%>
     </div>
@@ -14,5 +21,5 @@
     <div class="bg-green">
       <%= link_to 'Create new session', new_study_session_path ,class:"btn btn-bottom"%>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
