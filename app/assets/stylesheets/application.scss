@@ -102,6 +102,9 @@ input.nav-link {
     text-transform: uppercase;
     border: 1px solid white;
   }
+  &:hover{
+    background-color:#2f5d62;
+  }
 }
 
 .user {
