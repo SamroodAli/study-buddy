@@ -13,6 +13,6 @@ module StudySessionsHelper
 
   def sessions_page?
     url = request.url
-    url.include?('sessions') && !url.include?('no_sort')
+    url.include?('sessions') && url.include?('sort')
   end
 end

@@ -13,7 +13,7 @@
       <p> <%= duration(study_session) %></p>
       <p>Created at :<%= study_session.created_at %></p>
       <p><%= "Created by: " + study_session.author.name if collections_page?%></p>
-      <%= link_to "View this session", study_session_path(study_session,no_sort: true) ,class:"btn btn-success w-100  "%>
+      <%= link_to "View this session", study_session_path(study_session,sort: true) ,class:"btn btn-success w-100  "%>
     </div>
   </div>
 </div>
