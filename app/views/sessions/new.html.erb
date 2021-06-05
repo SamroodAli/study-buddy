@@ -9,12 +9,12 @@
   <div class="bg-green">
     <%= form.submit "Log in", class:"btn btn-bottom" %>
   </div>
-  <div class="m-3">
+  <div class="m-5">
     <%= form.label :remember_me, class: "checkbox inline" do %>
       <%= form.check_box :remember_me,class:"m-3" %>
       <span>Remember me on this computer</span>
+      <p class="mx-3">New User ?<%= link_to 'Sign up', signup_path ,class:"btn btn-success mx-3"%></p>
     <% end %>
   </div>
 <% end %>
-<p class="mx-3">New User ?<%= link_to 'Sign up', signup_path ,class:"btn nav-blue text-white mx-3"%></p>
 </div>
