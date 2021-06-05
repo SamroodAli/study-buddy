@@ -9,11 +9,11 @@ class NotesController < ApplicationController
   end
 
   def new
-    current_user.notes.build
+    @note  = current_user.notes.build
   end
 
   def create
-    @note = current.notes.create!(notes_params)
+    @note = current_user.notes.create!(notes_params)
     if @note.valid? && @note.save
       flash[:success] =  "Note #{@note.title} saved successfully"
       redirect_to @note
@@ -25,6 +25,6 @@ class NotesController < ApplicationController
 
   private
   def notes_params
-    params.require(:notes).permit(:title,:content)
+    params.require(:note).permit(:title,:content)
   end
 end

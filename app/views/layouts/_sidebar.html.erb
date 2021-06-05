@@ -11,29 +11,35 @@
             <i class="fas fa-tachometer-alt"></i>
             <span>User Dashboard</span>
           <% end %>
+          <li class="nav-item">
+            <%= link_to notes_path ,class:"nav-link" do%>
+              <i class="fas fa-pencil-square"></i>
+              <span>All notes</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to study_sessions_path ,class:"nav-link" do%>
+              <i class="fas fa-table"></i>
+              <span>Sessions</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to collections_path ,class:"nav-link" do%>
+              <i class="fas fa-th-large"></i>
+              <span>Collections</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to users_path ,class:"nav-link" do%>
+              <i class="fas fa-group"></i>
+              <span>Users</span>
+            <% end %>
+          </li>
         </li>
         <li class="nav-item">
           <%= link_to edit_user_path(current_user),class:"nav-link" do%>
             <i class="fas fa-user"></i>
             <span>Profile Settings</span>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to study_sessions_path ,class:"nav-link" do%>
-            <i class="fas fa-table"></i>
-            <span>Sessions</span>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to collections_path ,class:"nav-link" do%>
-            <i class="fas fa-th-large"></i>
-            <span>Collections</span>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to users_path ,class:"nav-link" do%>
-            <i class="fas fa-group"></i>
-            <span>Users</span>
           <% end %>
         </li>
         <li class="nav-item">

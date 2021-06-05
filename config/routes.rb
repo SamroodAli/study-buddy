@@ -18,5 +18,5 @@ Rails.application.routes.draw do
     get :new_session,:sessions, on: :member
   end
   resources :users
-  resources :notes, only: [:new,:create,:show,:index]
+  resources :notes
 end
