@@ -160,8 +160,12 @@ input.nav-link {
   position: relative;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  textarea {
+    height: 100%;
+  }
 }
