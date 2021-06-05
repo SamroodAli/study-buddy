@@ -8,6 +8,7 @@
     <%= form.password_field :password ,class:"form-control",placeholder:"Enter password"%>
     <%= form.label :password_confirmation,"Confirmation",class:"invisible" %>
     <%= form.password_field :password_confirmation ,class:"form-control",placeholder:"Confirm password"%>
+    <p class="mx-3">Already has an account ?<%= link_to 'Log in', login_path ,class:"btn btn-success mx-3"%></p>
   </div>
   <div class="bg-green">
     <%= form.submit user_button(@user), class:"btn btn-bottom" %>
