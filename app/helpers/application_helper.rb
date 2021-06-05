@@ -19,4 +19,12 @@ module ApplicationHelper
     min += hours * 60
     min * 60
   end
+
+  def new_page?
+    request.url.include?("new")
+  end
+
+  def fab_class
+    new_page? ? "new_page" : ""
+  end
 end
