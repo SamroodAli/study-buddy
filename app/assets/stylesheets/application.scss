@@ -15,6 +15,7 @@
 body {
   max-height: 100vh;
   color: $dark-color;
+  background-color: ghostwhite;
 }
 
 a {
@@ -48,12 +49,6 @@ input.nav-link {
   width: 4em;
 }
 
-.blue-section {
-  background-color: #a7c4bc;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 .gravatar {
   float: left;
