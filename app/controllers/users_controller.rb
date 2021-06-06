@@ -55,7 +55,7 @@ class UsersController < ApplicationController
     return if logged_in?
 
     store_original_url
-    flash[:danger] = 'PLease log in'
+    flash[:danger] = 'Please log in'
     redirect_to login_url
   end
 

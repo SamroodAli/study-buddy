@@ -5,8 +5,11 @@
 
 .alert {
   width: 100%;
-  background-color: #a7c4bc;
-  height: 5px;
+  background-color: $middle-color;
+  color: black;
+  padding: 1rem;
+  margin: 0;
+  color: white;
 }
 
 body {
