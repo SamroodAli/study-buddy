@@ -17,7 +17,7 @@ class NotesController < ApplicationController
     @note = current_user.notes.create!(notes_params)
     if @note.valid? && @note.save
       flash[:success] = "Note #{@note.title} saved successfully"
-      redirect_to @note
+      redirect_to root_path
     else
       flash[:danger] = 'Invalid notes entry'
       render :new
