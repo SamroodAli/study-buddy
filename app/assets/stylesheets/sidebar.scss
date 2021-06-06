@@ -45,9 +45,15 @@
 
 .list-group {
   .list-group-item {
-    background-color: $middle-color; /* Black */
-      color: white;
-    &:hover{
+    background-color: $middle-color;
+    font-size: 0.9em;
+    color: white;
+
+    @media (min-width: 540px) {
+      font-size: 1em;
+    }
+
+    &:hover {
       background-color: $dark-color;
     }
   }
