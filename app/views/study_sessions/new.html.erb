@@ -1,6 +1,6 @@
 <%= form_with model: @study_session, local: true do |form|%>
   <br>
-  <%= form.text_field :name ,class:"form-control", required: true,placeholder:"Enter session name"  %>
+  <%= form.text_field :name ,class:"form-control", required: true,placeholder:"Enter session name", required: true%>
   <%= form.label :collection, class:"form-label"%>
   <%= form.select(:collection_id, @collections, {}, { :class => 'form-select' }) %>
   <%= form.label :duration_start, class:"form-label"%>
