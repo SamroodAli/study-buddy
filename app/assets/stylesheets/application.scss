@@ -177,3 +177,15 @@ form {
 .heightfix {
   height: 100%;
 }
+
+// notes section
+.notes {
+  display: grid;
+  @media (min-width: 767px) {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  @media (min-width: 992) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
