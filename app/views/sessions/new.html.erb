@@ -2,9 +2,9 @@
   <h1 class="text-center m-3">Log in</h1>
   <div class="container">
     <%= form.label :email , class:"invisible"%>
-    <%= form.email_field :email ,class:"form-control",placeholder:"Enter email"%>
+    <%= form.email_field :email ,class:"form-control",placeholder:"Enter email", required: true%>
     <%= form.label :password ,class:"invisible"%>
-    <%= form.password_field :password ,class:"form-control"%>
+    <%= form.password_field :password ,class:"form-control",required: true%>
     <div class="my-3 card">
       <%= form.label :remember_me, class: "checkbox inline" do %>
         <%= form.check_box :remember_me,class:"m-3" %>
