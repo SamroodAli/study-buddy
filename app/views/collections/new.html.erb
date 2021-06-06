@@ -1,6 +1,6 @@
 <%= form_with model: @collection, local: true do |form|%>
   <br>
-  <%= form.text_field :name ,required: true,class:"form-control",placeholder:"Enter collection name"%>
+  <%= form.text_field :name ,required: true,class:"form-control",placeholder:"Enter collection name", required: true%>
   <br>
   <%= form.label :image ,"Choose logo [ Optional ]",class:"form-label"%>
   <%=  form.file_field :image, accept: "image/jpeg, image/gif, image/png",class:"form-control"%>
