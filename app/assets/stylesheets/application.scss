@@ -2,13 +2,11 @@
 @import 'sidebar';
 @import 'fab' ;
 
-
-.alert{
+.alert {
   width: 100%;
   background-color: #a7c4bc;
   height: 5px;
 }
-
 
 body {
   max-height: 100vh;
@@ -36,36 +34,6 @@ a {
   background: linear-gradient(#2f5d62 45%, #2f5d62 92%);
 }
 
-.navbar {
-  color: var(--bs-blue);
-  flex-wrap: nowrap;
-  padding: 1rem 1rem;
-  border: 1px solid silver;
-  height: 4.5rem;
-
-  .navbar-brand {
-    color: white;
-  }
-
-  button {
-    color: white;
-
-    &:hover {
-      color: white;
-    }
-  }
-
-  .btn:focus,
-  .btn-check:focus + .btn {
-    outline: 0;
-    box-shadow: 0 0 0 0;
-  }
-
-  i {
-    margin-right: 1rem;
-    color: white;
-  }
-}
 
 input.nav-link {
   background-color: rgba(0, 0, 0, 0);
@@ -178,7 +146,7 @@ input.nav-link {
   left: 0;
   right: 0;
 }
-  
+
 form {
   display: flex;
   flex-direction: column;
@@ -192,5 +160,37 @@ form {
 @media (min-width: 1200px) {
   .intro .intro-text {
     width: 45%;
+  }
+}
+
+
+.navbar {
+  color: var(--bs-blue);
+  flex-wrap: nowrap;
+  padding: 1rem 1rem;
+  border: 1px solid silver;
+  height: 4rem;
+
+  .navbar-brand {
+    color: white;
+  }
+
+  button {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .btn:focus,
+  .btn-check:focus + .btn {
+    outline: 0;
+    box-shadow: 0 0 0 0;
+  }
+
+  i {
+    margin-right: 1rem;
+    color: white;
   }
 }

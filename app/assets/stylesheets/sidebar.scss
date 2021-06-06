@@ -14,17 +14,16 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding:0;
+    padding: 0;
 
     li {
-      border:1px solid white;
-      padding:1rem;
+      border: 1px solid white;
+      padding: 1rem;
 
-      a{
+      a {
         color: white;
       }
     }
-    
   }
 }
 
@@ -53,11 +52,8 @@
   }
 }
 
-
-
-.list-group{
-  .list-group-item{
-      background-color: #5e8b7e; /* Black */
-
+.list-group {
+  .list-group-item {
+    background-color: #5e8b7e; /* Black */
   }
 }
