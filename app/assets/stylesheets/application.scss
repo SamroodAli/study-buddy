@@ -2,6 +2,14 @@
 @import 'sidebar';
 @import 'fab' ;
 
+
+.alert{
+  width: 100%;
+  background-color: #a7c4bc;
+  height: 5px;
+}
+
+
 body {
   max-height: 100vh;
   color: #2f5d62;
@@ -33,6 +41,7 @@ a {
   flex-wrap: nowrap;
   padding: 1rem 1rem;
   border: 1px solid silver;
+  height: 4.5rem;
 
   .navbar-brand {
     color: white;
