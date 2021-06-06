@@ -1,13 +1,13 @@
   <%= form_with model: @user, local: true do |form|%>
   <div class="container">
     <%= form.label :name,class:"invisible" %>
-    <%= form.text_field :name, class:"form-control",placeholder:"Enter name" %>
+    <%= form.text_field :name, class:"form-control",placeholder:"Enter name" ,required: true%>
     <%= form.label :email,class:"invisible" %>
-    <%= form.email_field :email ,class:"form-control",placeholder:"Enter email"%>
+    <%= form.email_field :email ,class:"form-control",placeholder:"Enter email", required: true%>
     <%= form.label :password,class:"invisible" %>
-    <%= form.password_field :password ,class:"form-control",placeholder:"Enter password"%>
+    <%= form.password_field :password ,class:"form-control",placeholder:"Enter password",required: true%>
     <%= form.label :password_confirmation,"Confirmation",class:"invisible" %>
-    <%= form.password_field :password_confirmation ,class:"form-control",placeholder:"Confirm password"%>
+    <%= form.password_field :password_confirmation ,class:"form-control",placeholder:"Confirm password", required: true%>
     <% if !logged_in? %>
       <div class="my-3 my-3 card">
         <p class="m-3">Already has an account ?<%= link_to 'Log in', login_path ,class:"btn btn-success mx-3"%></p>
