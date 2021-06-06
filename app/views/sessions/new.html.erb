@@ -1,5 +1,5 @@
-<h1 class="text-center m-3">Log in</h1>
 <%= form_with url: login_path, scope: :session,local: true do |form|%>
+  <h1 class="text-center m-3">Log in</h1>
   <div class="container">
     <%= form.label :email , class:"invisible"%>
     <%= form.email_field :email ,class:"form-control",placeholder:"Enter email"%>
@@ -12,9 +12,9 @@
       <% end %>
       <p class="m-3">New User ?<%= link_to 'Sign up', signup_path ,class:"btn btn-success mx-3"%></p>
     </div>
-    <div class="bg-green">
-      <%= form.submit "Log in", class:"btn btn-bottom" %>
-    </div>
   </div>
-</div>
+  <div class="bg-green">
+    <%= form.submit "Log in", class:"btn btn-bottom" %>
+  </div>
 <% end %>
+</div>
