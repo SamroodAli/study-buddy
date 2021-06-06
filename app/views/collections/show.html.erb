@@ -1,6 +1,6 @@
-<div class="blue-section">
+<div class="card container my-1">
   <%= image_tag @collection.image,class:"icon collection-icon gravatar" if @collection.image.attached?%>
-  <h1 class="text-light text-center"><%= @collection.name  %></h1>
-  <%= link_to 'Sessions in this collection', sessions_collection_path(@collection,sort: true) %>
-  <%= link_to 'Create new session in this collection', new_session_collection_path(@collection) %>
+  <h1 class="color text-center"><%= @collection.name  %></h1>
+  <%= link_to 'Sessions in this collection', sessions_collection_path(@collection,sort: true) ,class:"btn btn-success my-3"%>
+  <%= link_to 'Create new session in this collection', new_session_collection_path(@collection) ,class:"btn btn-success"%>
 </div>
