@@ -15,6 +15,6 @@
   </div>
   <%= form_with model: @study_session, local: true,class:"form-control" do |form|%>
     <%= form.text_area :note,placeholder:"Any notes for the session" %>
-    <%= form.submit session_note_button_text, placeholder:'sdas', class:"btn btn-success w-100"%>
+    <%= form.submit session_note_button_text(@study_session), placeholder:'sdas', class:"btn btn-success w-100"%>
   <% end %>
 </div>

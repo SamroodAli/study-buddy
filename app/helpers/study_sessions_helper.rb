@@ -10,4 +10,8 @@ module StudySessionsHelper
   def collections_page?
     request.url.include?('collections')
   end
+
+  def session_note_button_text(session)
+    session.note.blank? ? "Create note" : "Update note"
+  end
 end
