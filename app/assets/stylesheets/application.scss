@@ -6,7 +6,6 @@
 .alert {
   width: 100%;
   background-color: $middle-color;
-  color: black;
   padding: 1rem;
   margin: 0;
   color: white;
@@ -70,7 +69,7 @@ input.nav-link {
 }
 
 .bg-green {
-  background-color: $middle-color;
+  background-color: $dark-color;
   padding: 1rem;
   width: 100%;
   bottom: 0;
@@ -86,7 +85,7 @@ input.nav-link {
   }
 
   &:hover {
-    background-color: $dark -color;
+    background-color: $middle-color;
   }
 }
 
@@ -152,6 +151,7 @@ form {
   display: flex;
   flex-direction: column;
   height: 100%;
+
   textarea {
     overflow-y: scroll;
     height: 100%;
@@ -195,17 +195,18 @@ form {
   }
 }
 
-.sidebar-body{
+.sidebar-body {
   display: flex;
   flex-direction: row;
 }
 
-.yield{
+.yield {
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 92vh;
+  height: 92.5vh;
 }
 
-.heightfix{
+.heightfix {
+  height: 100%;
 }

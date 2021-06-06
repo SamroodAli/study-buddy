@@ -1,18 +1,15 @@
 .sidebar {
-  height: 100%;
   width: 0;
   z-index: 999;
   left: 0;
   background-color: $middle-color;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.3s;
-  height: 92.5vh;
 
   .sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
+    height: 92.5vh;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
   }
 }
 
