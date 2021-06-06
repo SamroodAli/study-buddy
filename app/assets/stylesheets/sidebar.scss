@@ -6,7 +6,7 @@
   z-index: 999; /* Stay on top */
   top: 4em;
   left: 0;
-  background-color: #5e8b7e; /* Black */
+  background-color: $middle-color; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
 
@@ -54,6 +54,9 @@
 
 .list-group {
   .list-group-item {
-    background-color: #5e8b7e; /* Black */
+    background-color: $middle-color; /* Black */
+    &:hover{
+      background-color: $dark-color;
+    }
   }
 }
