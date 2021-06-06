@@ -181,8 +181,9 @@ form {
 // notes section
 .notes {
   display: grid;
+
   @media (min-width: 767px) {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: 992) {

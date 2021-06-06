@@ -5,8 +5,13 @@ Each session has a short note for quick todos or notes. Have fun learning.
 ## Deployment
 - Heroku Link: [Click here](https://cool-study-buddy.herokuapp.com/)
 
-![Screenshot of the app](./app-ss.png)
-![Screenshot of the app](./app-ss-1.png)
+![Screenshot of the app](./app1.png)
+![Screenshot of the app](./app2.png)
+![Screenshot of the app](./app3.png)
+![Screenshot of the app](./app4.png)
+![Screenshot of the app](./app5.png)
+![Screenshot of the app](./app6.png)
+![Screenshot of the app](./app7.png)
 ## Getting started
 
 To get started with the app, first clone the repo and `cd` into the directory:
