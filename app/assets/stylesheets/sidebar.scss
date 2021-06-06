@@ -4,11 +4,10 @@
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 999; /* Stay on top */
-  top: 0;
+  top: 4.6rem;
   left: 0;
   background-color: #2f5d62; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
   transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
 
   .sidebar-nav {
