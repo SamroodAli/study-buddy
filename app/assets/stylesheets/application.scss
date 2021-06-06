@@ -66,7 +66,7 @@ input.nav-link {
 }
 
 .bg-green {
-  background-color: #5e8b7e;
+  background-color: $middle-color;
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -85,7 +85,7 @@ input.nav-link {
   }
 
   &:hover {
-    background-color: $dark-color;
+    background-color: $dark -color;
   }
 }
 
@@ -168,7 +168,7 @@ form {
   flex-wrap: nowrap;
   padding: 1rem 1rem;
   border: 1px solid silver;
-  height: 4rem;
+  height: 7.5vh;
 
   .navbar-brand {
     color: white;
