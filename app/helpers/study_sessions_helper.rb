@@ -12,6 +12,6 @@ module StudySessionsHelper
   end
 
   def session_note_button_text(session)
-    session.note.blank? ? "Create note" : "Update note"
+    session.note.blank? ? 'Create note' : 'Update note'
   end
 end
