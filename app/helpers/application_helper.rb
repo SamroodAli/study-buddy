@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def new_page?
-    request.url.include?('new') || request.url.include?('edit')
+    request.url.include?('new') || request.url.include?('edit') || request.url.include?("study_sessions/")
   end
 
   def fab_class
