@@ -7,12 +7,12 @@
   <body id="page-top">
     <div id="wrapper">
       <div class="d-flex flex-column" id="content-wrapper">
-        <%= render 'layouts/notice' %>
-        <%= render 'layouts/navbar' %>
         <%= render 'layouts/fab' %>
         <div class="sidebar-body">
           <%= render 'layouts/sidebar' %>
           <div class="yield">
+            <%= render 'layouts/navbar' %>
+            <%= render 'layouts/notice' %>
             <%= yield %>
           </div>
         </div>
