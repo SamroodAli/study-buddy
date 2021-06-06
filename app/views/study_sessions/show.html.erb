@@ -15,6 +15,7 @@
   </div>
   <%= form_with model: @study_session, local: true,class:"form-control mt-3" do |form|%>
     <%= form.text_area :note %>
+    <div class="heightfix"></div>
     <%= form.submit "Submit", placeholder:'sdas', class:"btn btn-success w-100"%>
   <% end %>
 </div>

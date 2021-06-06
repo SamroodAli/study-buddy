@@ -84,31 +84,7 @@ input.nav-link {
   }
 }
 
-.user {
-  color: grey;
-  font-size: 1.2em;
 
-  .user-name {
-    display: flex;
-
-    * {
-      margin: 0 0.5rem;
-    }
-  }
-
-  .user-icon {
-    float: left;
-  }
-
-  .card {
-    flex-direction: row;
-    padding: 0.5rem;
-  }
-
-  .column {
-    flex-direction: column;
-  }
-}
 
 .form-control,
 .form-select {
