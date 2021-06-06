@@ -1,7 +1,9 @@
 class NotesController < ApplicationController
   before_action :login_required
 
-  def show; end
+  def show; 
+    @note = Note.find(params[:id])
+  end
 
   def index
     @notes = current_user.notes.all

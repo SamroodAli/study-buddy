@@ -1,2 +1,9 @@
-<h1>Notes#show</h1>
-<p>Find me in app/views/notes/show.html.erb</p>
+<div class="card">
+  <div class="card-title">
+    <h1 class="text-center m-3"><%= @note.title %>
+    </h1>
+  </div>
+  <div class="card-body">
+    <%= @note.content %>
+  </div>
+</div>

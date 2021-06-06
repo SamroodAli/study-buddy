@@ -1,3 +1,5 @@
+@import 'colors';
+
 .fab-container {
   position: fixed;
   bottom: 3em;
@@ -18,7 +20,7 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  background: #2f5d62;
+  background: $dark-color;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -38,7 +40,7 @@
 .fab {
   width: 60px;
   height: 60px;
-  background: #2f5d62;
+  background: $dark-color;
 }
 
 .fab-options {
@@ -48,7 +50,7 @@
   bottom: 70px;
   right: 0;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   transform: scale(0);
   transform-origin: 85% bottom;
 }
@@ -73,7 +75,7 @@
   border-radius: 3px;
   font-size: 16px;
   background: #dfeeea;
-  color: #2f5d62;
+  color: $middle-color;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
 }
