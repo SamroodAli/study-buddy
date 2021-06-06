@@ -15,14 +15,6 @@
     flex-direction: column;
     list-style: none;
     padding: 0;
-
-    li {
-      padding: 1rem;
-
-      a {
-        color: white;
-      }
-    }
   }
 }
 
@@ -54,6 +46,7 @@
 .list-group {
   .list-group-item {
     background-color: $middle-color; /* Black */
+      color: white;
     &:hover{
       background-color: $dark-color;
     }
