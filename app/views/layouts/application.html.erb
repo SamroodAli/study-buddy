@@ -9,9 +9,13 @@
       <div class="d-flex flex-column" id="content-wrapper">
         <%= render 'layouts/notice' %>
         <%= render 'layouts/navbar' %>
-        <%= render 'layouts/sidebar' %>
         <%= render 'layouts/fab' %>
-        <%= yield %>
+        <div class="sidebar-body">
+          <%= render 'layouts/sidebar' %>
+          <div class="yield">
+            <%= yield %>
+          </div>
+        </div>
       </div>
     </div>
     <script>

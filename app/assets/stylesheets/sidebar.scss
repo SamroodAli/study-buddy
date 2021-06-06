@@ -1,15 +1,13 @@
-/* The sidebar menu */
 .sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Stay on top */
-  top: 7.5vh;
-  height: 92.5vh;
+  height: 100%;
+  width: 0;
+  z-index: 999;
   left: 0;
-  background-color: $middle-color; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
+  background-color: $middle-color;
+  overflow-x: hidden;
+  transition: 0.3s;
+  height: 92.5vh;
+  position: relative;
 
   .sidebar-nav {
     display: flex;
@@ -19,9 +17,6 @@
   }
 }
 
-/* When you mouse over the navigation links, change their color */
-
-/* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
   top: 0;
@@ -30,14 +25,13 @@
   margin-left: 50px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar { padding-top: 15px; }
   .sidebar a { font-size: 18px; }
 }
 
 .toggle-sidebar {
-  width: 35%;
+  width: 50%;
 
   @media (min-width: 540px) {
     width: 17%;
@@ -48,6 +42,7 @@
   .list-group-item {
     background-color: $middle-color;
     font-size: 0.9em;
+    padding: 1rem 1rem;
     color: white;
 
     @media (min-width: 540px) {
