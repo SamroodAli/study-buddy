@@ -13,8 +13,8 @@
     <p>Duration : </p>
     <p><%= distance_of_time_in_words(@study_session.duration)%></p>
   </div>
-  <%= form_with model: @study_session, local: true,class:"form-control" do |form|%>
-    <%= form.text_area :note,placeholder:"Any notes for the session" %>
-    <%= form.submit session_note_button_text(@study_session), placeholder:'sdas', class:"btn btn-success w-100"%>
+  <%= form_with model: @study_session, local: true do |form|%>
+    <%= form.text_area :note,placeholder:"Any notes for the session",class:"form-control" %>
+    <%= form.submit session_note_button_text(@study_session), class:"btn btn-success"%>
   <% end %>
 </div>
