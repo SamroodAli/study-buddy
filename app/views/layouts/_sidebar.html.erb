@@ -1,43 +1,43 @@
 <div id="mySidebar" class="sidebar">
-  <ul class="sidebar-nav text-light" id="accordionSidebar">
+  <ul class="sidebar-nav text-light list-group" id="accordionSidebar">
     <% if logged_in? %>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to current_user,class:"sidebar-link" do%>
           <i class="fas fa-tachometer-alt"></i>
           <span>User Dashboard</span>
         <% end %>
       </li>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to notes_path ,class:"sidebar-link" do%>
           <i class="fas fa-sticky-note"></i>
           <span>Notes</span>
         <% end %>
       </li>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to study_sessions_path ,class:"sidebar-link" do%>
           <i class="fas fa-table"></i>
           <span>Sessions</span>
         <% end %>
       </li>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to collections_path ,class:"sidebar-link" do%>
           <i class="fas fa-th-large"></i>
           <span>Collections</span>
         <% end %>
       </li>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to users_path ,class:"sidebar-link" do%>
           <i class="far fa-address-book"></i>
           <span>Users</span>
         <% end %>
       </li>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to edit_user_path(current_user),class:"sidebar-link" do%>
           <i class="fas fa-user"></i>
           <span>Settings</span>
         <% end %>
       </li>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to logout_path, :method => :delete, data: {:confirm => "You sure you want to log out?" } ,
                             :title => "log out",class:"sidebar-link" do%>
           <i class="fas fa-sign-out-alt"></i>
@@ -45,13 +45,13 @@
         <% end %>
       </li>
     <% else %>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to login_path ,class:"sidebar-link" do%>
           <i class="far fa-user-circle"></i>
           <span>Login</span>
         <% end %>
       </li>
-      <li class="sidebar-item-container">
+      <li class="sidebar-item-container list-group-item">
         <%= link_to signup_path ,class:"sidebar-link" do%>
           <i class="fas fa-user-circle"></i>
           <span>Register</span>
