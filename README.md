@@ -1,6 +1,5 @@
 # Study Buddy
-An app to track your study sessions with the option to put them in collections for easy access later on.
-Each session has a short note for quick todos or notes. Have fun learning.
+An app to track your study sessions with the option to put them in collections for easy access later on. You can also create now create notes.
 
 ## Deployment
 - Heroku Link: [Click here](https://cool-study-buddy.herokuapp.com/)
