@@ -16,8 +16,8 @@ An app to track your study sessions with the option to put them in collections f
 To get started with the app, first clone the repo and `cd` into the directory:
 
 ```
-$ git clone https://github.com/SamroodAli/ror-social-scaffold.git
-$ cd members-only
+$ git clone https://github.com/SamroodAli/study-buddy.git
+$ cd study-buddy
 ```
 on:
   # Triggers the workflow on push or pull request events but only for the development branch
