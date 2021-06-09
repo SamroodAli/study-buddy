@@ -1,5 +1,5 @@
 # Study Buddy
-An app to track your study sessions with the option to put them in collections for easy access later on. You can also create now create notes.
+An app to track your study sessions with the option to put them in collections for easy access later on. You can also now create notes. This was my rails capstone for the bootcamp Microverse. This was my own first full fledged rails app After Micheal Hartl's Rails tutorial. It is completely responsive, scales well and elegant. The app was made to resemble a web app and the all components are fully customisable. Thanks.
 
 ## Deployment
 - Heroku Link: [Click here](https://cool-study-buddy.herokuapp.com/)
@@ -16,8 +16,8 @@ An app to track your study sessions with the option to put them in collections f
 To get started with the app, first clone the repo and `cd` into the directory:
 
 ```
-$ git clone https://github.com/SamroodAli/ror-social-scaffold.git
-$ cd members-only
+$ git clone https://github.com/SamroodAli/study-buddy.git
+$ cd study-buddy
 ```
 on:
   # Triggers the workflow on push or pull request events but only for the development branch
