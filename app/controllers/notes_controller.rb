@@ -19,7 +19,6 @@ class NotesController < ApplicationController
       flash[:success] = "Note #{@note.title} saved successfully"
       redirect_to root_path
     else
-      flash[:danger] = 'Invalid notes entry'
       render :new
     end
   end

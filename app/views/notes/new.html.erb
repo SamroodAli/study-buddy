@@ -1,8 +1,9 @@
 <%= form_with model: @note, local: true do |form|%>
+  <%= render 'shared/error_messages',object:form.object %>
   <%= form.label :title,class:"invisible form-label" %>
   <%= form.text_field :title ,class:"form-control",placeholder:"Enter title"%>
   <%= form.label :content,class:"form-label" %>
-  <%= form.text_area :content ,class:"form-control",placeholder:"Note down here!", required: false
+  <%= form.text_area :content ,class:"form-control",placeholder:"Note down here!", required: true
   %>
   <div class="bg-green">
     <%= form.submit "Submit", class:"btn btn-bottom" %>
