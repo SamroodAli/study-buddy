@@ -25,7 +25,6 @@ class UsersController < ApplicationController
       @user.collections.create(name: 'Not in any collection', external: true)
       redirect_to @user
     else
-      flash[:notice] = 'Sorry, no login'
       render :new
     end
   end
