@@ -106,7 +106,7 @@ input.nav-link {
 }
 
 #content-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -180,6 +180,7 @@ form {
 // notes section
 .notes {
   display: grid;
+  overflow-y: scroll;
 
   @media (min-width: 767px) {
     grid-template-columns: repeat(4, 1fr);
